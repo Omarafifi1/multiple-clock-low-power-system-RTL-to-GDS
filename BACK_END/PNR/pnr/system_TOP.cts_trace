@@ -1,0 +1,1440 @@
+
+
+
+
+
+Tracing Clock SCAN_CLK
+Warning: Pin scan_clk_uart_rx_clk_mux/U1/Y is a reconvergence pins in Clock SCAN_CLK
+Warning: Pin rx_div/U19/Y is a reconvergence pins in Clock SCAN_CLK
+Warning: Pin scan_clk_uart_tx_clk_mux/U1/Y is a reconvergence pins in Clock SCAN_CLK
+Warning: Pin tx_div/U19/Y is a reconvergence pins in Clock SCAN_CLK
+
+****** Clock Tree (SCAN_CLK) Structure
+Nr. Subtrees                   : 10
+Nr. Sinks                      : 407
+Nr.          Rising  Sync Pins : 407
+Nr. Inverter Rising  Sync Pins : 0
+Nr.          Falling Sync Pins : 0
+Nr. Inverter Falling Sync Pins : 0
+
+** Leaf Pins
+CELL (PORT)                            Nr.
+-----------------------------------------------
+SDFFSQX1M (CK)                          1
+SDFFSQX2M (CK)                          2
+SDFFRQX4M (CK)                          5
+SDFFRX1M (CK)                           8
+SDFFRHQX1M (CK)                         3
+SDFFRHQX2M (CK)                         5
+SDFFRHQX4M (CK)                         8
+SDFFRQX1M (CK)                          3
+SDFFRQX2M (CK)                          372
+-----------------------------------------------
+
+
+
+
+** Gate Component Input Pins
+CELL (PORT)                            Nr.
+-----------------------------------------------
+OAI2BB2X1M (A0N)                        2
+OAI2BB2X1M (B1)                         2
+SDFFRX1M (CK)                           2
+AO2B2X4M (B1)                           1
+AO2B2X2M (A0)                           2
+TLATNCAX3M (CK)                         1
+AO2B2X2M (B1)                           3
+-----------------------------------------------
+
+
+
+** Subtree Detail
+*DEPTH 0 Input_Pin: (EMPTY) Output_Pin: (SCAN_CLK) Cell: (EMPTY) Net: (SCAN_CLK) NO-INV
+          Nr. of Exclude Pins           : 0
+          Nr. of Total Sync Pins        : 0
+          Nr. of     Rising  Sync Pins  : 0
+          Nr. of Inv Rising  Sync Pins  : 0
+          Nr. of     Falling Sync Pins  : 0
+          Nr. of Inv Falling Sync Pins  : 0
+          Nr. of Gated Clocks           : 4
+*DEPTH 1 Input_Pin: (scan_clk_uart_clk_mux/U1/B1) Output_Pin: (scan_clk_uart_clk_mux/U1/Y) Cell: (AO2B2X2M) Net: (scan_clk_uart_clk_mux_out) NO-INV
+          Nr. of Exclude Pins           : 0
+          Nr. of Total Sync Pins        : 19
+          Nr. of     Rising  Sync Pins  : 19
+          Nr. of Inv Rising  Sync Pins  : 0
+          Nr. of     Falling Sync Pins  : 0
+          Nr. of Inv Falling Sync Pins  : 0
+          Nr. of Gated Clocks           : 4
+*DEPTH 2 Input_Pin: (tx_div/clk_reg_reg/CK) Output_Pin: (tx_div/clk_reg_reg/QN) Cell: (SDFFRX1M) Net: (tx_div/n16) NO-INV
+          Nr. of Exclude Pins           : 1
+          Nr. of Total Sync Pins        : 0
+          Nr. of     Rising  Sync Pins  : 0
+          Nr. of Inv Rising  Sync Pins  : 0
+          Nr. of     Falling Sync Pins  : 0
+          Nr. of Inv Falling Sync Pins  : 0
+          Nr. of Gated Clocks           : 1
+*DEPTH 3 Input_Pin: (tx_div/U19/B1) Output_Pin: (tx_div/U19/Y) Cell: (OAI2BB2X1M) Net: (tx_clk) NO-INV
+          Nr. of Exclude Pins           : 1
+          Nr. of Total Sync Pins        : 0
+          Nr. of     Rising  Sync Pins  : 0
+          Nr. of Inv Rising  Sync Pins  : 0
+          Nr. of     Falling Sync Pins  : 0
+          Nr. of Inv Falling Sync Pins  : 0
+          Nr. of Gated Clocks           : 1
+*DEPTH 4 Input_Pin: (scan_clk_uart_tx_clk_mux/U1/A0) Output_Pin: (scan_clk_uart_tx_clk_mux/U1/Y) Cell: (AO2B2X2M) Net: (scan_clk_uart_tx_clk_mux_out) NO-INV
+          Nr. of Exclude Pins           : 0
+          Nr. of Total Sync Pins        : 38
+          Nr. of     Rising  Sync Pins  : 38
+          Nr. of Inv Rising  Sync Pins  : 0
+          Nr. of     Falling Sync Pins  : 0
+          Nr. of Inv Falling Sync Pins  : 0
+          Nr. of Gated Clocks           : 0
+*DEPTH 2 Input_Pin: (tx_div/U19/A0N) Output_Pin: (tx_div/U19/Y) Cell: (OAI2BB2X1M) Net: (tx_clk) NO-INV
+          Nr. of Exclude Pins           : 1
+          Nr. of Total Sync Pins        : 0
+          Nr. of     Rising  Sync Pins  : 0
+          Nr. of Inv Rising  Sync Pins  : 0
+          Nr. of     Falling Sync Pins  : 0
+          Nr. of Inv Falling Sync Pins  : 0
+          Nr. of Gated Clocks           : 1
+*DEPTH 3 Input_Pin: (scan_clk_uart_tx_clk_mux/U1/A0) Output_Pin: (scan_clk_uart_tx_clk_mux/U1/Y) Cell: (AO2B2X2M) Net: (scan_clk_uart_tx_clk_mux_out) NO-INV
+          Nr. of Exclude Pins           : 0
+          Nr. of Total Sync Pins        : 38
+          Nr. of     Rising  Sync Pins  : 38
+          Nr. of Inv Rising  Sync Pins  : 0
+          Nr. of     Falling Sync Pins  : 0
+          Nr. of Inv Falling Sync Pins  : 0
+          Nr. of Gated Clocks           : 0
+*DEPTH 2 Input_Pin: (rx_div/clk_reg_reg/CK) Output_Pin: (rx_div/clk_reg_reg/QN) Cell: (SDFFRX1M) Net: (rx_div/n65) NO-INV
+          Nr. of Exclude Pins           : 1
+          Nr. of Total Sync Pins        : 0
+          Nr. of     Rising  Sync Pins  : 0
+          Nr. of Inv Rising  Sync Pins  : 0
+          Nr. of     Falling Sync Pins  : 0
+          Nr. of Inv Falling Sync Pins  : 0
+          Nr. of Gated Clocks           : 1
+*DEPTH 3 Input_Pin: (rx_div/U19/B1) Output_Pin: (rx_div/U19/Y) Cell: (OAI2BB2X1M) Net: (rx_clk) NO-INV
+          Nr. of Exclude Pins           : 1
+          Nr. of Total Sync Pins        : 0
+          Nr. of     Rising  Sync Pins  : 0
+          Nr. of Inv Rising  Sync Pins  : 0
+          Nr. of     Falling Sync Pins  : 0
+          Nr. of Inv Falling Sync Pins  : 0
+          Nr. of Gated Clocks           : 1
+*DEPTH 4 Input_Pin: (scan_clk_uart_rx_clk_mux/U1/A0) Output_Pin: (scan_clk_uart_rx_clk_mux/U1/Y) Cell: (AO2B2X2M) Net: (scan_clk_uart_rx_clk_mux_out) NO-INV
+          Nr. of Exclude Pins           : 0
+          Nr. of Total Sync Pins        : 26
+          Nr. of     Rising  Sync Pins  : 26
+          Nr. of Inv Rising  Sync Pins  : 0
+          Nr. of     Falling Sync Pins  : 0
+          Nr. of Inv Falling Sync Pins  : 0
+          Nr. of Gated Clocks           : 0
+*DEPTH 2 Input_Pin: (rx_div/U19/A0N) Output_Pin: (rx_div/U19/Y) Cell: (OAI2BB2X1M) Net: (rx_clk) NO-INV
+          Nr. of Exclude Pins           : 1
+          Nr. of Total Sync Pins        : 0
+          Nr. of     Rising  Sync Pins  : 0
+          Nr. of Inv Rising  Sync Pins  : 0
+          Nr. of     Falling Sync Pins  : 0
+          Nr. of Inv Falling Sync Pins  : 0
+          Nr. of Gated Clocks           : 1
+*DEPTH 3 Input_Pin: (scan_clk_uart_rx_clk_mux/U1/A0) Output_Pin: (scan_clk_uart_rx_clk_mux/U1/Y) Cell: (AO2B2X2M) Net: (scan_clk_uart_rx_clk_mux_out) NO-INV
+          Nr. of Exclude Pins           : 0
+          Nr. of Total Sync Pins        : 26
+          Nr. of     Rising  Sync Pins  : 26
+          Nr. of Inv Rising  Sync Pins  : 0
+          Nr. of     Falling Sync Pins  : 0
+          Nr. of Inv Falling Sync Pins  : 0
+          Nr. of Gated Clocks           : 0
+*DEPTH 1 Input_Pin: (scan_clk_ref_clk_mux/U1/B1) Output_Pin: (scan_clk_ref_clk_mux/U1/Y) Cell: (AO2B2X4M) Net: (scan_clk_ref_clk_mux_out) NO-INV
+          Nr. of Exclude Pins           : 0
+          Nr. of Total Sync Pins        : 307
+          Nr. of     Rising  Sync Pins  : 307
+          Nr. of Inv Rising  Sync Pins  : 0
+          Nr. of     Falling Sync Pins  : 0
+          Nr. of Inv Falling Sync Pins  : 0
+          Nr. of Gated Clocks           : 1
+*DEPTH 2 Input_Pin: (clock_gating_cell/dut0/CK) Output_Pin: (clock_gating_cell/dut0/ECK) Cell: (TLATNCAX3M) Net: (gated_clk) NO-INV
+          Nr. of Exclude Pins           : 0
+          Nr. of Total Sync Pins        : 17
+          Nr. of     Rising  Sync Pins  : 17
+          Nr. of Inv Rising  Sync Pins  : 0
+          Nr. of     Falling Sync Pins  : 0
+          Nr. of Inv Falling Sync Pins  : 0
+          Nr. of Gated Clocks           : 0
+*DEPTH 1 Input_Pin: (scan_clk_uart_tx_clk_mux/U1/B1) Output_Pin: (scan_clk_uart_tx_clk_mux/U1/Y) Cell: (AO2B2X2M) Net: (scan_clk_uart_tx_clk_mux_out) NO-INV
+          Nr. of Exclude Pins           : 0
+          Nr. of Total Sync Pins        : 38
+          Nr. of     Rising  Sync Pins  : 38
+          Nr. of Inv Rising  Sync Pins  : 0
+          Nr. of     Falling Sync Pins  : 0
+          Nr. of Inv Falling Sync Pins  : 0
+          Nr. of Gated Clocks           : 0
+*DEPTH 1 Input_Pin: (scan_clk_uart_rx_clk_mux/U1/B1) Output_Pin: (scan_clk_uart_rx_clk_mux/U1/Y) Cell: (AO2B2X2M) Net: (scan_clk_uart_rx_clk_mux_out) NO-INV
+          Nr. of Exclude Pins           : 0
+          Nr. of Total Sync Pins        : 26
+          Nr. of     Rising  Sync Pins  : 26
+          Nr. of Inv Rising  Sync Pins  : 0
+          Nr. of     Falling Sync Pins  : 0
+          Nr. of Inv Falling Sync Pins  : 0
+          Nr. of Gated Clocks           : 0
+***********************************************************
+
+****** Pre CTS Detail Structure for clock SCAN_CLK
+*DEPTH 0: SCAN_CLK
+ *DEPTH 1: scan_clk_uart_clk_mux/U1(B1->Y)
+  (Sync)uart_clk_rst_sync/syn_rst_reg_reg[0]/CK
+  (Sync)uart_clk_rst_sync/syn_rst_reg_reg[2]/CK
+  (Sync)uart_clk_rst_sync/syn_rst_reg_reg[1]/CK
+  (Sync)tx_div/counter_reg[4]/CK
+  (Sync)tx_div/counter_reg[0]/CK
+  (Sync)tx_div/counter_reg[6]/CK
+  (Sync)tx_div/counter_reg[2]/CK
+  (Sync)tx_div/counter_reg[5]/CK
+  (Sync)tx_div/counter_reg[1]/CK
+  (Sync)tx_div/counter_reg[3]/CK
+  (Sync)tx_div/counter_reg[7]/CK
+  (Sync)rx_div/counter_reg[4]/CK
+  (Sync)rx_div/counter_reg[0]/CK
+  (Sync)rx_div/counter_reg[6]/CK
+  (Sync)rx_div/counter_reg[2]/CK
+  (Sync)rx_div/counter_reg[5]/CK
+  (Sync)rx_div/counter_reg[1]/CK
+  (Sync)rx_div/counter_reg[3]/CK
+  (Sync)rx_div/counter_reg[7]/CK
+  *DEPTH 2: tx_div/clk_reg_reg(CK->QN)
+   (Excl)tx_div/U31/B
+   *DEPTH 3: tx_div/U19(B1->Y)
+    (Excl)tx_div/U32/A
+    *DEPTH 4: scan_clk_uart_tx_clk_mux/U1(A0->Y)
+     (Sync)q1_reg/CK
+     (Sync)q2_reg/CK
+     (Sync)async_fifo/dut3/rd_ptr_reg[4]/CK
+     (Sync)async_fifo/dut3/rd_ptr_reg[0]/CK
+     (Sync)async_fifo/dut3/rd_address_reg[0]/CK
+     (Sync)async_fifo/dut3/rd_address_reg[1]/CK
+     (Sync)async_fifo/dut3/rd_address_reg[2]/CK
+     (Sync)async_fifo/dut3/rd_ptr_reg[1]/CK
+     (Sync)async_fifo/dut3/rd_ptr_reg[2]/CK
+     (Sync)async_fifo/dut3/rd_ptr_reg[3]/CK
+     (Sync)async_fifo/dut3/rd_address_reg[3]/CK
+     (Sync)async_fifo/dut5/q2_reg[0]/CK
+     (Sync)async_fifo/dut5/q2_reg[1]/CK
+     (Sync)async_fifo/dut5/q2_reg[4]/CK
+     (Sync)async_fifo/dut5/q2_reg[3]/CK
+     (Sync)async_fifo/dut5/q2_reg[2]/CK
+     (Sync)async_fifo/dut5/q1_reg[4]/CK
+     (Sync)async_fifo/dut5/q1_reg[3]/CK
+     (Sync)async_fifo/dut5/q1_reg[2]/CK
+     (Sync)async_fifo/dut5/q1_reg[1]/CK
+     (Sync)async_fifo/dut5/q1_reg[0]/CK
+     (Sync)UART_tx/uut0/current_state_reg[0]/CK
+     (Sync)UART_tx/uut0/current_state_reg[2]/CK
+     (Sync)UART_tx/uut0/current_state_reg[1]/CK
+     (Sync)UART_tx/uut1/parallel_data_reg_reg[6]/CK
+     (Sync)UART_tx/uut1/parallel_data_reg_reg[5]/CK
+     (Sync)UART_tx/uut1/parallel_data_reg_reg[4]/CK
+     (Sync)UART_tx/uut1/parallel_data_reg_reg[3]/CK
+     (Sync)UART_tx/uut1/parallel_data_reg_reg[2]/CK
+     (Sync)UART_tx/uut1/parallel_data_reg_reg[1]/CK
+     (Sync)UART_tx/uut1/parallel_data_reg_reg[7]/CK
+     (Sync)UART_tx/uut1/parallel_data_reg_reg[0]/CK
+     (Sync)UART_tx/uut1/counter_reg[2]/CK
+     (Sync)UART_tx/uut1/counter_reg[0]/CK
+     (Sync)UART_tx/uut1/counter_reg[1]/CK
+     (Sync)UART_tx/uut2/parity_bit_reg/CK
+     (Sync)pulse_gen/q_reg/CK
+     (Sync)pulse_gen/out_reg/CK
+  *DEPTH 2: tx_div/U19(A0N->Y)
+   (Excl)tx_div/U32/A
+   *DEPTH 3: scan_clk_uart_tx_clk_mux/U1(A0->Y)
+    (Sync)q1_reg/CK
+    (Sync)q2_reg/CK
+    (Sync)async_fifo/dut3/rd_ptr_reg[4]/CK
+    (Sync)async_fifo/dut3/rd_ptr_reg[0]/CK
+    (Sync)async_fifo/dut3/rd_address_reg[0]/CK
+    (Sync)async_fifo/dut3/rd_address_reg[1]/CK
+    (Sync)async_fifo/dut3/rd_address_reg[2]/CK
+    (Sync)async_fifo/dut3/rd_ptr_reg[1]/CK
+    (Sync)async_fifo/dut3/rd_ptr_reg[2]/CK
+    (Sync)async_fifo/dut3/rd_ptr_reg[3]/CK
+    (Sync)async_fifo/dut3/rd_address_reg[3]/CK
+    (Sync)async_fifo/dut5/q2_reg[0]/CK
+    (Sync)async_fifo/dut5/q2_reg[1]/CK
+    (Sync)async_fifo/dut5/q2_reg[4]/CK
+    (Sync)async_fifo/dut5/q2_reg[3]/CK
+    (Sync)async_fifo/dut5/q2_reg[2]/CK
+    (Sync)async_fifo/dut5/q1_reg[4]/CK
+    (Sync)async_fifo/dut5/q1_reg[3]/CK
+    (Sync)async_fifo/dut5/q1_reg[2]/CK
+    (Sync)async_fifo/dut5/q1_reg[1]/CK
+    (Sync)async_fifo/dut5/q1_reg[0]/CK
+    (Sync)UART_tx/uut0/current_state_reg[0]/CK
+    (Sync)UART_tx/uut0/current_state_reg[2]/CK
+    (Sync)UART_tx/uut0/current_state_reg[1]/CK
+    (Sync)UART_tx/uut1/parallel_data_reg_reg[6]/CK
+    (Sync)UART_tx/uut1/parallel_data_reg_reg[5]/CK
+    (Sync)UART_tx/uut1/parallel_data_reg_reg[4]/CK
+    (Sync)UART_tx/uut1/parallel_data_reg_reg[3]/CK
+    (Sync)UART_tx/uut1/parallel_data_reg_reg[2]/CK
+    (Sync)UART_tx/uut1/parallel_data_reg_reg[1]/CK
+    (Sync)UART_tx/uut1/parallel_data_reg_reg[7]/CK
+    (Sync)UART_tx/uut1/parallel_data_reg_reg[0]/CK
+    (Sync)UART_tx/uut1/counter_reg[2]/CK
+    (Sync)UART_tx/uut1/counter_reg[0]/CK
+    (Sync)UART_tx/uut1/counter_reg[1]/CK
+    (Sync)UART_tx/uut2/parity_bit_reg/CK
+    (Sync)pulse_gen/q_reg/CK
+    (Sync)pulse_gen/out_reg/CK
+  *DEPTH 2: rx_div/clk_reg_reg(CK->QN)
+   (Excl)rx_div/U31/B
+   *DEPTH 3: rx_div/U19(B1->Y)
+    (Excl)rx_div/U32/A
+    *DEPTH 4: scan_clk_uart_rx_clk_mux/U1(A0->Y)
+     (Sync)uart_RX/dut0/sampled_data_reg[2]/CK
+     (Sync)uart_RX/dut0/sampled_data_reg[0]/CK
+     (Sync)uart_RX/dut0/sampled_data_reg[1]/CK
+     (Sync)uart_RX/dut0/sampled_bit_reg/CK
+     (Sync)uart_RX/dut1/data_bit_counter_reg[2]/CK
+     (Sync)uart_RX/dut1/data_bit_counter_reg[1]/CK
+     (Sync)uart_RX/dut1/data_bit_counter_reg[0]/CK
+     (Sync)uart_RX/dut1/edge_counter_reg[5]/CK
+     (Sync)uart_RX/dut1/edge_counter_reg[0]/CK
+     (Sync)uart_RX/dut1/edge_counter_reg[4]/CK
+     (Sync)uart_RX/dut1/edge_counter_reg[3]/CK
+     (Sync)uart_RX/dut1/edge_counter_reg[2]/CK
+     (Sync)uart_RX/dut1/edge_counter_reg[1]/CK
+     (Sync)uart_RX/dut2/current_state_reg[2]/CK
+     (Sync)uart_RX/dut2/current_state_reg[1]/CK
+     (Sync)uart_RX/dut2/current_state_reg[0]/CK
+     (Sync)uart_RX/dut3/p_data_reg[0]/CK
+     (Sync)uart_RX/dut3/p_data_reg[7]/CK
+     (Sync)uart_RX/dut3/p_data_reg[3]/CK
+     (Sync)uart_RX/dut3/p_data_reg[6]/CK
+     (Sync)uart_RX/dut3/p_data_reg[5]/CK
+     (Sync)uart_RX/dut3/p_data_reg[2]/CK
+     (Sync)uart_RX/dut3/p_data_reg[4]/CK
+     (Sync)uart_RX/dut3/p_data_reg[1]/CK
+     (Sync)uart_RX/dut4/parity_error_reg/CK
+     (Sync)uart_RX/dut6/stop_error_reg/CK
+  *DEPTH 2: rx_div/U19(A0N->Y)
+   (Excl)rx_div/U32/A
+   *DEPTH 3: scan_clk_uart_rx_clk_mux/U1(A0->Y)
+    (Sync)uart_RX/dut0/sampled_data_reg[2]/CK
+    (Sync)uart_RX/dut0/sampled_data_reg[0]/CK
+    (Sync)uart_RX/dut0/sampled_data_reg[1]/CK
+    (Sync)uart_RX/dut0/sampled_bit_reg/CK
+    (Sync)uart_RX/dut1/data_bit_counter_reg[2]/CK
+    (Sync)uart_RX/dut1/data_bit_counter_reg[1]/CK
+    (Sync)uart_RX/dut1/data_bit_counter_reg[0]/CK
+    (Sync)uart_RX/dut1/edge_counter_reg[5]/CK
+    (Sync)uart_RX/dut1/edge_counter_reg[0]/CK
+    (Sync)uart_RX/dut1/edge_counter_reg[4]/CK
+    (Sync)uart_RX/dut1/edge_counter_reg[3]/CK
+    (Sync)uart_RX/dut1/edge_counter_reg[2]/CK
+    (Sync)uart_RX/dut1/edge_counter_reg[1]/CK
+    (Sync)uart_RX/dut2/current_state_reg[2]/CK
+    (Sync)uart_RX/dut2/current_state_reg[1]/CK
+    (Sync)uart_RX/dut2/current_state_reg[0]/CK
+    (Sync)uart_RX/dut3/p_data_reg[0]/CK
+    (Sync)uart_RX/dut3/p_data_reg[7]/CK
+    (Sync)uart_RX/dut3/p_data_reg[3]/CK
+    (Sync)uart_RX/dut3/p_data_reg[6]/CK
+    (Sync)uart_RX/dut3/p_data_reg[5]/CK
+    (Sync)uart_RX/dut3/p_data_reg[2]/CK
+    (Sync)uart_RX/dut3/p_data_reg[4]/CK
+    (Sync)uart_RX/dut3/p_data_reg[1]/CK
+    (Sync)uart_RX/dut4/parity_error_reg/CK
+    (Sync)uart_RX/dut6/stop_error_reg/CK
+ *DEPTH 1: scan_clk_ref_clk_mux/U1(B1->Y)
+  (Sync)sys_ctrl/address_reg[1]/CK
+  (Sync)sys_ctrl/current_state_reg[2]/CK
+  (Sync)sys_ctrl/current_state_reg[0]/CK
+  (Sync)sys_ctrl/current_state_reg[3]/CK
+  (Sync)sys_ctrl/current_state_reg[1]/CK
+  (Sync)sys_ctrl/address_reg[2]/CK
+  (Sync)sys_ctrl/address_reg[3]/CK
+  (Sync)sys_ctrl/address_reg[0]/CK
+  (Sync)data_sync/dut1/enable_sync_reg_reg[0]/CK
+  (Sync)data_sync/dut1/enable_sync_reg_reg[1]/CK
+  (Sync)data_sync/dut2/q_reg/CK
+  (Sync)data_sync/dut2/out_reg/CK
+  (Sync)data_sync/dut3/sync_bus_reg[7]/CK
+  (Sync)data_sync/dut3/sync_bus_reg[3]/CK
+  (Sync)data_sync/dut3/sync_bus_reg[6]/CK
+  (Sync)data_sync/dut3/sync_bus_reg[5]/CK
+  (Sync)data_sync/dut3/sync_bus_reg[0]/CK
+  (Sync)data_sync/dut3/sync_bus_reg[4]/CK
+  (Sync)data_sync/dut3/sync_bus_reg[2]/CK
+  (Sync)data_sync/dut3/sync_bus_reg[1]/CK
+  (Sync)register_file/rddata_reg[7]/CK
+  (Sync)register_file/rddata_reg[6]/CK
+  (Sync)register_file/rddata_reg[5]/CK
+  (Sync)register_file/rddata_reg[4]/CK
+  (Sync)register_file/rddata_reg[3]/CK
+  (Sync)register_file/rddata_reg[2]/CK
+  (Sync)register_file/rddata_reg[1]/CK
+  (Sync)register_file/rddata_reg[0]/CK
+  (Sync)register_file/reg_file_reg[5][7]/CK
+  (Sync)register_file/reg_file_reg[5][6]/CK
+  (Sync)register_file/reg_file_reg[5][5]/CK
+  (Sync)register_file/reg_file_reg[5][4]/CK
+  (Sync)register_file/reg_file_reg[5][3]/CK
+  (Sync)register_file/reg_file_reg[5][2]/CK
+  (Sync)register_file/reg_file_reg[5][1]/CK
+  (Sync)register_file/reg_file_reg[5][0]/CK
+  (Sync)register_file/reg_file_reg[9][7]/CK
+  (Sync)register_file/reg_file_reg[9][6]/CK
+  (Sync)register_file/reg_file_reg[9][5]/CK
+  (Sync)register_file/reg_file_reg[9][4]/CK
+  (Sync)register_file/reg_file_reg[9][3]/CK
+  (Sync)register_file/reg_file_reg[9][2]/CK
+  (Sync)register_file/reg_file_reg[9][1]/CK
+  (Sync)register_file/reg_file_reg[9][0]/CK
+  (Sync)register_file/reg_file_reg[13][7]/CK
+  (Sync)register_file/reg_file_reg[13][6]/CK
+  (Sync)register_file/reg_file_reg[13][5]/CK
+  (Sync)register_file/reg_file_reg[13][4]/CK
+  (Sync)register_file/reg_file_reg[13][3]/CK
+  (Sync)register_file/reg_file_reg[13][2]/CK
+  (Sync)register_file/reg_file_reg[13][1]/CK
+  (Sync)register_file/reg_file_reg[13][0]/CK
+  (Sync)register_file/reg_file_reg[7][7]/CK
+  (Sync)register_file/reg_file_reg[7][6]/CK
+  (Sync)register_file/reg_file_reg[7][5]/CK
+  (Sync)register_file/reg_file_reg[7][4]/CK
+  (Sync)register_file/reg_file_reg[7][3]/CK
+  (Sync)register_file/reg_file_reg[7][2]/CK
+  (Sync)register_file/reg_file_reg[7][1]/CK
+  (Sync)register_file/reg_file_reg[7][0]/CK
+  (Sync)register_file/reg_file_reg[11][7]/CK
+  (Sync)register_file/reg_file_reg[11][6]/CK
+  (Sync)register_file/reg_file_reg[11][5]/CK
+  (Sync)register_file/reg_file_reg[11][4]/CK
+  (Sync)register_file/reg_file_reg[11][3]/CK
+  (Sync)register_file/reg_file_reg[11][2]/CK
+  (Sync)register_file/reg_file_reg[11][1]/CK
+  (Sync)register_file/reg_file_reg[11][0]/CK
+  (Sync)register_file/reg_file_reg[15][7]/CK
+  (Sync)register_file/reg_file_reg[15][6]/CK
+  (Sync)register_file/reg_file_reg[15][5]/CK
+  (Sync)register_file/reg_file_reg[15][4]/CK
+  (Sync)register_file/reg_file_reg[15][3]/CK
+  (Sync)register_file/reg_file_reg[15][2]/CK
+  (Sync)register_file/reg_file_reg[15][1]/CK
+  (Sync)register_file/reg_file_reg[15][0]/CK
+  (Sync)register_file/reg_file_reg[6][7]/CK
+  (Sync)register_file/reg_file_reg[6][6]/CK
+  (Sync)register_file/reg_file_reg[6][5]/CK
+  (Sync)register_file/reg_file_reg[6][4]/CK
+  (Sync)register_file/reg_file_reg[6][3]/CK
+  (Sync)register_file/reg_file_reg[6][2]/CK
+  (Sync)register_file/reg_file_reg[6][1]/CK
+  (Sync)register_file/reg_file_reg[6][0]/CK
+  (Sync)register_file/reg_file_reg[10][7]/CK
+  (Sync)register_file/reg_file_reg[10][6]/CK
+  (Sync)register_file/reg_file_reg[10][5]/CK
+  (Sync)register_file/reg_file_reg[10][4]/CK
+  (Sync)register_file/reg_file_reg[10][3]/CK
+  (Sync)register_file/reg_file_reg[10][2]/CK
+  (Sync)register_file/reg_file_reg[10][1]/CK
+  (Sync)register_file/reg_file_reg[10][0]/CK
+  (Sync)register_file/reg_file_reg[14][7]/CK
+  (Sync)register_file/reg_file_reg[14][6]/CK
+  (Sync)register_file/reg_file_reg[14][5]/CK
+  (Sync)register_file/reg_file_reg[14][4]/CK
+  (Sync)register_file/reg_file_reg[14][3]/CK
+  (Sync)register_file/reg_file_reg[14][2]/CK
+  (Sync)register_file/reg_file_reg[14][1]/CK
+  (Sync)register_file/reg_file_reg[14][0]/CK
+  (Sync)register_file/reg_file_reg[4][7]/CK
+  (Sync)register_file/reg_file_reg[4][6]/CK
+  (Sync)register_file/reg_file_reg[4][5]/CK
+  (Sync)register_file/reg_file_reg[4][4]/CK
+  (Sync)register_file/reg_file_reg[4][3]/CK
+  (Sync)register_file/reg_file_reg[4][2]/CK
+  (Sync)register_file/reg_file_reg[4][1]/CK
+  (Sync)register_file/reg_file_reg[4][0]/CK
+  (Sync)register_file/reg_file_reg[8][7]/CK
+  (Sync)register_file/reg_file_reg[8][6]/CK
+  (Sync)register_file/reg_file_reg[8][5]/CK
+  (Sync)register_file/reg_file_reg[8][4]/CK
+  (Sync)register_file/reg_file_reg[8][3]/CK
+  (Sync)register_file/reg_file_reg[8][2]/CK
+  (Sync)register_file/reg_file_reg[8][1]/CK
+  (Sync)register_file/reg_file_reg[8][0]/CK
+  (Sync)register_file/reg_file_reg[12][7]/CK
+  (Sync)register_file/reg_file_reg[12][6]/CK
+  (Sync)register_file/reg_file_reg[12][4]/CK
+  (Sync)register_file/reg_file_reg[12][3]/CK
+  (Sync)register_file/reg_file_reg[12][2]/CK
+  (Sync)register_file/reg_file_reg[12][1]/CK
+  (Sync)register_file/reg_file_reg[12][0]/CK
+  (Sync)register_file/rddata_valid_reg/CK
+  (Sync)register_file/reg_file_reg[1][6]/CK
+  (Sync)register_file/reg_file_reg[1][1]/CK
+  (Sync)register_file/reg_file_reg[0][7]/CK
+  (Sync)register_file/reg_file_reg[0][6]/CK
+  (Sync)register_file/reg_file_reg[0][5]/CK
+  (Sync)register_file/reg_file_reg[0][4]/CK
+  (Sync)register_file/reg_file_reg[0][3]/CK
+  (Sync)register_file/reg_file_reg[0][2]/CK
+  (Sync)register_file/reg_file_reg[0][1]/CK
+  (Sync)register_file/reg_file_reg[0][0]/CK
+  (Sync)register_file/reg_file_reg[2][1]/CK
+  (Sync)register_file/reg_file_reg[2][0]/CK
+  (Sync)register_file/reg_file_reg[1][7]/CK
+  (Sync)register_file/reg_file_reg[1][5]/CK
+  (Sync)register_file/reg_file_reg[1][4]/CK
+  (Sync)register_file/reg_file_reg[1][3]/CK
+  (Sync)register_file/reg_file_reg[1][2]/CK
+  (Sync)register_file/reg_file_reg[1][0]/CK
+  (Sync)register_file/reg_file_reg[3][5]/CK
+  (Sync)register_file/reg_file_reg[3][0]/CK
+  (Sync)register_file/reg_file_reg[3][1]/CK
+  (Sync)register_file/reg_file_reg[3][4]/CK
+  (Sync)register_file/reg_file_reg[3][6]/CK
+  (Sync)register_file/reg_file_reg[3][3]/CK
+  (Sync)register_file/reg_file_reg[3][2]/CK
+  (Sync)register_file/reg_file_reg[3][7]/CK
+  (Sync)register_file/reg_file_reg[2][4]/CK
+  (Sync)register_file/reg_file_reg[2][2]/CK
+  (Sync)register_file/reg_file_reg[2][5]/CK
+  (Sync)register_file/reg_file_reg[2][6]/CK
+  (Sync)register_file/reg_file_reg[2][7]/CK
+  (Sync)register_file/reg_file_reg[2][3]/CK
+  (Sync)register_file/reg_file_reg[12][5]/CK
+  (Sync)async_fifo/dut1/w_address_reg[3]/CK
+  (Sync)async_fifo/dut1/w_address_reg[0]/CK
+  (Sync)async_fifo/dut1/w_address_reg[2]/CK
+  (Sync)async_fifo/dut1/w_address_reg[1]/CK
+  (Sync)async_fifo/dut1/wr_ptr_reg[4]/CK
+  (Sync)async_fifo/dut1/wr_ptr_reg[0]/CK
+  (Sync)async_fifo/dut1/wr_ptr_reg[3]/CK
+  (Sync)async_fifo/dut1/wr_ptr_reg[2]/CK
+  (Sync)async_fifo/dut1/wr_ptr_reg[1]/CK
+  (Sync)async_fifo/dut2/fifo_reg[1][7]/CK
+  (Sync)async_fifo/dut2/fifo_reg[1][6]/CK
+  (Sync)async_fifo/dut2/fifo_reg[1][5]/CK
+  (Sync)async_fifo/dut2/fifo_reg[1][4]/CK
+  (Sync)async_fifo/dut2/fifo_reg[1][3]/CK
+  (Sync)async_fifo/dut2/fifo_reg[1][2]/CK
+  (Sync)async_fifo/dut2/fifo_reg[1][1]/CK
+  (Sync)async_fifo/dut2/fifo_reg[1][0]/CK
+  (Sync)async_fifo/dut2/fifo_reg[5][7]/CK
+  (Sync)async_fifo/dut2/fifo_reg[5][6]/CK
+  (Sync)async_fifo/dut2/fifo_reg[5][5]/CK
+  (Sync)async_fifo/dut2/fifo_reg[5][4]/CK
+  (Sync)async_fifo/dut2/fifo_reg[5][3]/CK
+  (Sync)async_fifo/dut2/fifo_reg[5][2]/CK
+  (Sync)async_fifo/dut2/fifo_reg[5][1]/CK
+  (Sync)async_fifo/dut2/fifo_reg[9][7]/CK
+  (Sync)async_fifo/dut2/fifo_reg[9][6]/CK
+  (Sync)async_fifo/dut2/fifo_reg[9][5]/CK
+  (Sync)async_fifo/dut2/fifo_reg[9][4]/CK
+  (Sync)async_fifo/dut2/fifo_reg[9][3]/CK
+  (Sync)async_fifo/dut2/fifo_reg[9][2]/CK
+  (Sync)async_fifo/dut2/fifo_reg[9][1]/CK
+  (Sync)async_fifo/dut2/fifo_reg[9][0]/CK
+  (Sync)async_fifo/dut2/fifo_reg[13][7]/CK
+  (Sync)async_fifo/dut2/fifo_reg[13][6]/CK
+  (Sync)async_fifo/dut2/fifo_reg[13][5]/CK
+  (Sync)async_fifo/dut2/fifo_reg[13][4]/CK
+  (Sync)async_fifo/dut2/fifo_reg[13][3]/CK
+  (Sync)async_fifo/dut2/fifo_reg[13][2]/CK
+  (Sync)async_fifo/dut2/fifo_reg[13][1]/CK
+  (Sync)async_fifo/dut2/fifo_reg[13][0]/CK
+  (Sync)async_fifo/dut2/fifo_reg[3][7]/CK
+  (Sync)async_fifo/dut2/fifo_reg[3][6]/CK
+  (Sync)async_fifo/dut2/fifo_reg[3][5]/CK
+  (Sync)async_fifo/dut2/fifo_reg[3][4]/CK
+  (Sync)async_fifo/dut2/fifo_reg[3][3]/CK
+  (Sync)async_fifo/dut2/fifo_reg[3][2]/CK
+  (Sync)async_fifo/dut2/fifo_reg[3][1]/CK
+  (Sync)async_fifo/dut2/fifo_reg[3][0]/CK
+  (Sync)async_fifo/dut2/fifo_reg[7][7]/CK
+  (Sync)async_fifo/dut2/fifo_reg[7][6]/CK
+  (Sync)async_fifo/dut2/fifo_reg[7][5]/CK
+  (Sync)async_fifo/dut2/fifo_reg[7][4]/CK
+  (Sync)async_fifo/dut2/fifo_reg[7][3]/CK
+  (Sync)async_fifo/dut2/fifo_reg[7][2]/CK
+  (Sync)async_fifo/dut2/fifo_reg[7][1]/CK
+  (Sync)async_fifo/dut2/fifo_reg[7][0]/CK
+  (Sync)async_fifo/dut2/fifo_reg[11][7]/CK
+  (Sync)async_fifo/dut2/fifo_reg[11][6]/CK
+  (Sync)async_fifo/dut2/fifo_reg[11][5]/CK
+  (Sync)async_fifo/dut2/fifo_reg[11][4]/CK
+  (Sync)async_fifo/dut2/fifo_reg[11][3]/CK
+  (Sync)async_fifo/dut2/fifo_reg[11][2]/CK
+  (Sync)async_fifo/dut2/fifo_reg[11][1]/CK
+  (Sync)async_fifo/dut2/fifo_reg[11][0]/CK
+  (Sync)async_fifo/dut2/fifo_reg[15][7]/CK
+  (Sync)async_fifo/dut2/fifo_reg[15][6]/CK
+  (Sync)async_fifo/dut2/fifo_reg[15][5]/CK
+  (Sync)async_fifo/dut2/fifo_reg[15][4]/CK
+  (Sync)async_fifo/dut2/fifo_reg[15][3]/CK
+  (Sync)async_fifo/dut2/fifo_reg[15][1]/CK
+  (Sync)async_fifo/dut2/fifo_reg[15][0]/CK
+  (Sync)async_fifo/dut2/fifo_reg[2][7]/CK
+  (Sync)async_fifo/dut2/fifo_reg[2][6]/CK
+  (Sync)async_fifo/dut2/fifo_reg[2][5]/CK
+  (Sync)async_fifo/dut2/fifo_reg[2][4]/CK
+  (Sync)async_fifo/dut2/fifo_reg[2][3]/CK
+  (Sync)async_fifo/dut2/fifo_reg[2][2]/CK
+  (Sync)async_fifo/dut2/fifo_reg[2][1]/CK
+  (Sync)async_fifo/dut2/fifo_reg[2][0]/CK
+  (Sync)async_fifo/dut2/fifo_reg[6][7]/CK
+  (Sync)async_fifo/dut2/fifo_reg[6][6]/CK
+  (Sync)async_fifo/dut2/fifo_reg[6][5]/CK
+  (Sync)async_fifo/dut2/fifo_reg[6][4]/CK
+  (Sync)async_fifo/dut2/fifo_reg[6][3]/CK
+  (Sync)async_fifo/dut2/fifo_reg[6][2]/CK
+  (Sync)async_fifo/dut2/fifo_reg[6][1]/CK
+  (Sync)async_fifo/dut2/fifo_reg[6][0]/CK
+  (Sync)async_fifo/dut2/fifo_reg[10][7]/CK
+  (Sync)async_fifo/dut2/fifo_reg[10][6]/CK
+  (Sync)async_fifo/dut2/fifo_reg[10][5]/CK
+  (Sync)async_fifo/dut2/fifo_reg[10][4]/CK
+  (Sync)async_fifo/dut2/fifo_reg[10][3]/CK
+  (Sync)async_fifo/dut2/fifo_reg[10][2]/CK
+  (Sync)async_fifo/dut2/fifo_reg[10][1]/CK
+  (Sync)async_fifo/dut2/fifo_reg[10][0]/CK
+  (Sync)async_fifo/dut2/fifo_reg[14][7]/CK
+  (Sync)async_fifo/dut2/fifo_reg[14][6]/CK
+  (Sync)async_fifo/dut2/fifo_reg[14][5]/CK
+  (Sync)async_fifo/dut2/fifo_reg[14][4]/CK
+  (Sync)async_fifo/dut2/fifo_reg[14][3]/CK
+  (Sync)async_fifo/dut2/fifo_reg[14][2]/CK
+  (Sync)async_fifo/dut2/fifo_reg[14][1]/CK
+  (Sync)async_fifo/dut2/fifo_reg[14][0]/CK
+  (Sync)async_fifo/dut2/fifo_reg[0][7]/CK
+  (Sync)async_fifo/dut2/fifo_reg[0][6]/CK
+  (Sync)async_fifo/dut2/fifo_reg[0][5]/CK
+  (Sync)async_fifo/dut2/fifo_reg[0][4]/CK
+  (Sync)async_fifo/dut2/fifo_reg[0][3]/CK
+  (Sync)async_fifo/dut2/fifo_reg[0][2]/CK
+  (Sync)async_fifo/dut2/fifo_reg[0][1]/CK
+  (Sync)async_fifo/dut2/fifo_reg[0][0]/CK
+  (Sync)async_fifo/dut2/fifo_reg[4][7]/CK
+  (Sync)async_fifo/dut2/fifo_reg[4][6]/CK
+  (Sync)async_fifo/dut2/fifo_reg[4][5]/CK
+  (Sync)async_fifo/dut2/fifo_reg[4][4]/CK
+  (Sync)async_fifo/dut2/fifo_reg[4][3]/CK
+  (Sync)async_fifo/dut2/fifo_reg[4][2]/CK
+  (Sync)async_fifo/dut2/fifo_reg[4][1]/CK
+  (Sync)async_fifo/dut2/fifo_reg[4][0]/CK
+  (Sync)async_fifo/dut2/fifo_reg[8][7]/CK
+  (Sync)async_fifo/dut2/fifo_reg[8][6]/CK
+  (Sync)async_fifo/dut2/fifo_reg[8][5]/CK
+  (Sync)async_fifo/dut2/fifo_reg[8][4]/CK
+  (Sync)async_fifo/dut2/fifo_reg[8][3]/CK
+  (Sync)async_fifo/dut2/fifo_reg[8][2]/CK
+  (Sync)async_fifo/dut2/fifo_reg[8][1]/CK
+  (Sync)async_fifo/dut2/fifo_reg[8][0]/CK
+  (Sync)async_fifo/dut2/fifo_reg[12][7]/CK
+  (Sync)async_fifo/dut2/fifo_reg[12][6]/CK
+  (Sync)async_fifo/dut2/fifo_reg[12][5]/CK
+  (Sync)async_fifo/dut2/fifo_reg[12][4]/CK
+  (Sync)async_fifo/dut2/fifo_reg[12][3]/CK
+  (Sync)async_fifo/dut2/fifo_reg[12][2]/CK
+  (Sync)async_fifo/dut2/fifo_reg[12][1]/CK
+  (Sync)async_fifo/dut2/fifo_reg[12][0]/CK
+  (Sync)async_fifo/dut2/fifo_reg[5][0]/CK
+  (Sync)async_fifo/dut2/fifo_reg[15][2]/CK
+  (Sync)async_fifo/dut4/q2_reg[4]/CK
+  (Sync)async_fifo/dut4/q2_reg[3]/CK
+  (Sync)async_fifo/dut4/q2_reg[2]/CK
+  (Sync)async_fifo/dut4/q2_reg[1]/CK
+  (Sync)async_fifo/dut4/q2_reg[0]/CK
+  (Sync)async_fifo/dut4/q1_reg[4]/CK
+  (Sync)async_fifo/dut4/q1_reg[3]/CK
+  (Sync)async_fifo/dut4/q1_reg[2]/CK
+  (Sync)async_fifo/dut4/q1_reg[1]/CK
+  (Sync)async_fifo/dut4/q1_reg[0]/CK
+  (Sync)ref_clk_rst_sync/syn_rst_reg_reg[0]/CK
+  (Sync)ref_clk_rst_sync/syn_rst_reg_reg[2]/CK
+  (Sync)ref_clk_rst_sync/syn_rst_reg_reg[1]/CK
+  *DEPTH 2: clock_gating_cell/dut0(CK->ECK)
+   (Sync)alu/out_valid_reg/CK
+   (Sync)alu/alu_out_reg[7]/CK
+   (Sync)alu/alu_out_reg[6]/CK
+   (Sync)alu/alu_out_reg[5]/CK
+   (Sync)alu/alu_out_reg[4]/CK
+   (Sync)alu/alu_out_reg[3]/CK
+   (Sync)alu/alu_out_reg[2]/CK
+   (Sync)alu/alu_out_reg[1]/CK
+   (Sync)alu/alu_out_reg[0]/CK
+   (Sync)alu/alu_out_reg[15]/CK
+   (Sync)alu/alu_out_reg[14]/CK
+   (Sync)alu/alu_out_reg[13]/CK
+   (Sync)alu/alu_out_reg[12]/CK
+   (Sync)alu/alu_out_reg[11]/CK
+   (Sync)alu/alu_out_reg[10]/CK
+   (Sync)alu/alu_out_reg[9]/CK
+   (Sync)alu/alu_out_reg[8]/CK
+ *DEPTH 1: scan_clk_uart_tx_clk_mux/U1(B1->Y)
+  (Sync)q1_reg/CK
+  (Sync)q2_reg/CK
+  (Sync)async_fifo/dut3/rd_ptr_reg[4]/CK
+  (Sync)async_fifo/dut3/rd_ptr_reg[0]/CK
+  (Sync)async_fifo/dut3/rd_address_reg[0]/CK
+  (Sync)async_fifo/dut3/rd_address_reg[1]/CK
+  (Sync)async_fifo/dut3/rd_address_reg[2]/CK
+  (Sync)async_fifo/dut3/rd_ptr_reg[1]/CK
+  (Sync)async_fifo/dut3/rd_ptr_reg[2]/CK
+  (Sync)async_fifo/dut3/rd_ptr_reg[3]/CK
+  (Sync)async_fifo/dut3/rd_address_reg[3]/CK
+  (Sync)async_fifo/dut5/q2_reg[0]/CK
+  (Sync)async_fifo/dut5/q2_reg[1]/CK
+  (Sync)async_fifo/dut5/q2_reg[4]/CK
+  (Sync)async_fifo/dut5/q2_reg[3]/CK
+  (Sync)async_fifo/dut5/q2_reg[2]/CK
+  (Sync)async_fifo/dut5/q1_reg[4]/CK
+  (Sync)async_fifo/dut5/q1_reg[3]/CK
+  (Sync)async_fifo/dut5/q1_reg[2]/CK
+  (Sync)async_fifo/dut5/q1_reg[1]/CK
+  (Sync)async_fifo/dut5/q1_reg[0]/CK
+  (Sync)UART_tx/uut0/current_state_reg[0]/CK
+  (Sync)UART_tx/uut0/current_state_reg[2]/CK
+  (Sync)UART_tx/uut0/current_state_reg[1]/CK
+  (Sync)UART_tx/uut1/parallel_data_reg_reg[6]/CK
+  (Sync)UART_tx/uut1/parallel_data_reg_reg[5]/CK
+  (Sync)UART_tx/uut1/parallel_data_reg_reg[4]/CK
+  (Sync)UART_tx/uut1/parallel_data_reg_reg[3]/CK
+  (Sync)UART_tx/uut1/parallel_data_reg_reg[2]/CK
+  (Sync)UART_tx/uut1/parallel_data_reg_reg[1]/CK
+  (Sync)UART_tx/uut1/parallel_data_reg_reg[7]/CK
+  (Sync)UART_tx/uut1/parallel_data_reg_reg[0]/CK
+  (Sync)UART_tx/uut1/counter_reg[2]/CK
+  (Sync)UART_tx/uut1/counter_reg[0]/CK
+  (Sync)UART_tx/uut1/counter_reg[1]/CK
+  (Sync)UART_tx/uut2/parity_bit_reg/CK
+  (Sync)pulse_gen/q_reg/CK
+  (Sync)pulse_gen/out_reg/CK
+ *DEPTH 1: scan_clk_uart_rx_clk_mux/U1(B1->Y)
+  (Sync)uart_RX/dut0/sampled_data_reg[2]/CK
+  (Sync)uart_RX/dut0/sampled_data_reg[0]/CK
+  (Sync)uart_RX/dut0/sampled_data_reg[1]/CK
+  (Sync)uart_RX/dut0/sampled_bit_reg/CK
+  (Sync)uart_RX/dut1/data_bit_counter_reg[2]/CK
+  (Sync)uart_RX/dut1/data_bit_counter_reg[1]/CK
+  (Sync)uart_RX/dut1/data_bit_counter_reg[0]/CK
+  (Sync)uart_RX/dut1/edge_counter_reg[5]/CK
+  (Sync)uart_RX/dut1/edge_counter_reg[0]/CK
+  (Sync)uart_RX/dut1/edge_counter_reg[4]/CK
+  (Sync)uart_RX/dut1/edge_counter_reg[3]/CK
+  (Sync)uart_RX/dut1/edge_counter_reg[2]/CK
+  (Sync)uart_RX/dut1/edge_counter_reg[1]/CK
+  (Sync)uart_RX/dut2/current_state_reg[2]/CK
+  (Sync)uart_RX/dut2/current_state_reg[1]/CK
+  (Sync)uart_RX/dut2/current_state_reg[0]/CK
+  (Sync)uart_RX/dut3/p_data_reg[0]/CK
+  (Sync)uart_RX/dut3/p_data_reg[7]/CK
+  (Sync)uart_RX/dut3/p_data_reg[3]/CK
+  (Sync)uart_RX/dut3/p_data_reg[6]/CK
+  (Sync)uart_RX/dut3/p_data_reg[5]/CK
+  (Sync)uart_RX/dut3/p_data_reg[2]/CK
+  (Sync)uart_RX/dut3/p_data_reg[4]/CK
+  (Sync)uart_RX/dut3/p_data_reg[1]/CK
+  (Sync)uart_RX/dut4/parity_error_reg/CK
+  (Sync)uart_RX/dut6/stop_error_reg/CK
+
+
+
+
+
+Tracing Clock Uart_clk
+Pin scan_clk_uart_clk_mux/U1/Y is a crossover pin in Clock SCAN_CLK
+
+****** Clock Tree (Uart_clk) Structure
+Nr. Subtrees                   : 8
+Nr. Sinks                      : 83
+Nr.          Rising  Sync Pins : 83
+Nr. Inverter Rising  Sync Pins : 0
+Nr.          Falling Sync Pins : 0
+Nr. Inverter Falling Sync Pins : 0
+
+** Leaf Pins
+CELL (PORT)                            Nr.
+-----------------------------------------------
+SDFFRQX4M (CK)                          1
+SDFFRX1M (CK)                           5
+SDFFRQX1M (CK)                          1
+SDFFRQX2M (CK)                          76
+-----------------------------------------------
+
+
+
+
+** Gate Component Input Pins
+CELL (PORT)                            Nr.
+-----------------------------------------------
+OAI2BB2X1M (A0N)                        2
+OAI2BB2X1M (B1)                         2
+SDFFRX1M (CK)                           2
+AO2B2X2M (A0)                           3
+-----------------------------------------------
+
+
+
+** Subtree Detail
+*DEPTH 0 Input_Pin: (EMPTY) Output_Pin: (Uart_clk) Cell: (EMPTY) Net: (Uart_clk) NO-INV
+          Nr. of Exclude Pins           : 0
+          Nr. of Total Sync Pins        : 0
+          Nr. of     Rising  Sync Pins  : 0
+          Nr. of Inv Rising  Sync Pins  : 0
+          Nr. of     Falling Sync Pins  : 0
+          Nr. of Inv Falling Sync Pins  : 0
+          Nr. of Gated Clocks           : 1
+*DEPTH 1 Input_Pin: (scan_clk_uart_clk_mux/U1/A0) Output_Pin: (scan_clk_uart_clk_mux/U1/Y) Cell: (AO2B2X2M) Net: (scan_clk_uart_clk_mux_out) NO-INV
+          Nr. of Exclude Pins           : 0
+          Nr. of Total Sync Pins        : 19
+          Nr. of     Rising  Sync Pins  : 19
+          Nr. of Inv Rising  Sync Pins  : 0
+          Nr. of     Falling Sync Pins  : 0
+          Nr. of Inv Falling Sync Pins  : 0
+          Nr. of Gated Clocks           : 4
+*DEPTH 2 Input_Pin: (tx_div/clk_reg_reg/CK) Output_Pin: (tx_div/clk_reg_reg/QN) Cell: (SDFFRX1M) Net: (tx_div/n16) NO-INV
+          Nr. of Exclude Pins           : 1
+          Nr. of Total Sync Pins        : 0
+          Nr. of     Rising  Sync Pins  : 0
+          Nr. of Inv Rising  Sync Pins  : 0
+          Nr. of     Falling Sync Pins  : 0
+          Nr. of Inv Falling Sync Pins  : 0
+          Nr. of Gated Clocks           : 1
+*DEPTH 3 Input_Pin: (tx_div/U19/B1) Output_Pin: (tx_div/U19/Y) Cell: (OAI2BB2X1M) Net: (tx_clk) NO-INV
+          Nr. of Exclude Pins           : 1
+          Nr. of Total Sync Pins        : 0
+          Nr. of     Rising  Sync Pins  : 0
+          Nr. of Inv Rising  Sync Pins  : 0
+          Nr. of     Falling Sync Pins  : 0
+          Nr. of Inv Falling Sync Pins  : 0
+          Nr. of Gated Clocks           : 1
+*DEPTH 4 Input_Pin: (scan_clk_uart_tx_clk_mux/U1/A0) Output_Pin: (scan_clk_uart_tx_clk_mux/U1/Y) Cell: (AO2B2X2M) Net: (scan_clk_uart_tx_clk_mux_out) NO-INV
+          Nr. of Exclude Pins           : 0
+          Nr. of Total Sync Pins        : 38
+          Nr. of     Rising  Sync Pins  : 38
+          Nr. of Inv Rising  Sync Pins  : 0
+          Nr. of     Falling Sync Pins  : 0
+          Nr. of Inv Falling Sync Pins  : 0
+          Nr. of Gated Clocks           : 0
+*DEPTH 2 Input_Pin: (tx_div/U19/A0N) Output_Pin: (tx_div/U19/Y) Cell: (OAI2BB2X1M) Net: (tx_clk) NO-INV
+          Nr. of Exclude Pins           : 1
+          Nr. of Total Sync Pins        : 0
+          Nr. of     Rising  Sync Pins  : 0
+          Nr. of Inv Rising  Sync Pins  : 0
+          Nr. of     Falling Sync Pins  : 0
+          Nr. of Inv Falling Sync Pins  : 0
+          Nr. of Gated Clocks           : 1
+*DEPTH 3 Input_Pin: (scan_clk_uart_tx_clk_mux/U1/A0) Output_Pin: (scan_clk_uart_tx_clk_mux/U1/Y) Cell: (AO2B2X2M) Net: (scan_clk_uart_tx_clk_mux_out) NO-INV
+          Nr. of Exclude Pins           : 0
+          Nr. of Total Sync Pins        : 38
+          Nr. of     Rising  Sync Pins  : 38
+          Nr. of Inv Rising  Sync Pins  : 0
+          Nr. of     Falling Sync Pins  : 0
+          Nr. of Inv Falling Sync Pins  : 0
+          Nr. of Gated Clocks           : 0
+*DEPTH 2 Input_Pin: (rx_div/clk_reg_reg/CK) Output_Pin: (rx_div/clk_reg_reg/QN) Cell: (SDFFRX1M) Net: (rx_div/n65) NO-INV
+          Nr. of Exclude Pins           : 1
+          Nr. of Total Sync Pins        : 0
+          Nr. of     Rising  Sync Pins  : 0
+          Nr. of Inv Rising  Sync Pins  : 0
+          Nr. of     Falling Sync Pins  : 0
+          Nr. of Inv Falling Sync Pins  : 0
+          Nr. of Gated Clocks           : 1
+*DEPTH 3 Input_Pin: (rx_div/U19/B1) Output_Pin: (rx_div/U19/Y) Cell: (OAI2BB2X1M) Net: (rx_clk) NO-INV
+          Nr. of Exclude Pins           : 1
+          Nr. of Total Sync Pins        : 0
+          Nr. of     Rising  Sync Pins  : 0
+          Nr. of Inv Rising  Sync Pins  : 0
+          Nr. of     Falling Sync Pins  : 0
+          Nr. of Inv Falling Sync Pins  : 0
+          Nr. of Gated Clocks           : 1
+*DEPTH 4 Input_Pin: (scan_clk_uart_rx_clk_mux/U1/A0) Output_Pin: (scan_clk_uart_rx_clk_mux/U1/Y) Cell: (AO2B2X2M) Net: (scan_clk_uart_rx_clk_mux_out) NO-INV
+          Nr. of Exclude Pins           : 0
+          Nr. of Total Sync Pins        : 26
+          Nr. of     Rising  Sync Pins  : 26
+          Nr. of Inv Rising  Sync Pins  : 0
+          Nr. of     Falling Sync Pins  : 0
+          Nr. of Inv Falling Sync Pins  : 0
+          Nr. of Gated Clocks           : 0
+*DEPTH 2 Input_Pin: (rx_div/U19/A0N) Output_Pin: (rx_div/U19/Y) Cell: (OAI2BB2X1M) Net: (rx_clk) NO-INV
+          Nr. of Exclude Pins           : 1
+          Nr. of Total Sync Pins        : 0
+          Nr. of     Rising  Sync Pins  : 0
+          Nr. of Inv Rising  Sync Pins  : 0
+          Nr. of     Falling Sync Pins  : 0
+          Nr. of Inv Falling Sync Pins  : 0
+          Nr. of Gated Clocks           : 1
+*DEPTH 3 Input_Pin: (scan_clk_uart_rx_clk_mux/U1/A0) Output_Pin: (scan_clk_uart_rx_clk_mux/U1/Y) Cell: (AO2B2X2M) Net: (scan_clk_uart_rx_clk_mux_out) NO-INV
+          Nr. of Exclude Pins           : 0
+          Nr. of Total Sync Pins        : 26
+          Nr. of     Rising  Sync Pins  : 26
+          Nr. of Inv Rising  Sync Pins  : 0
+          Nr. of     Falling Sync Pins  : 0
+          Nr. of Inv Falling Sync Pins  : 0
+          Nr. of Gated Clocks           : 0
+***********************************************************
+
+****** Pre CTS Detail Structure for clock Uart_clk
+*DEPTH 0: Uart_clk
+ *DEPTH 1: scan_clk_uart_clk_mux/U1(A0->Y)
+  (Sync)uart_clk_rst_sync/syn_rst_reg_reg[0]/CK
+  (Sync)uart_clk_rst_sync/syn_rst_reg_reg[2]/CK
+  (Sync)uart_clk_rst_sync/syn_rst_reg_reg[1]/CK
+  (Sync)tx_div/counter_reg[4]/CK
+  (Sync)tx_div/counter_reg[0]/CK
+  (Sync)tx_div/counter_reg[6]/CK
+  (Sync)tx_div/counter_reg[2]/CK
+  (Sync)tx_div/counter_reg[5]/CK
+  (Sync)tx_div/counter_reg[1]/CK
+  (Sync)tx_div/counter_reg[3]/CK
+  (Sync)tx_div/counter_reg[7]/CK
+  (Sync)rx_div/counter_reg[4]/CK
+  (Sync)rx_div/counter_reg[0]/CK
+  (Sync)rx_div/counter_reg[6]/CK
+  (Sync)rx_div/counter_reg[2]/CK
+  (Sync)rx_div/counter_reg[5]/CK
+  (Sync)rx_div/counter_reg[1]/CK
+  (Sync)rx_div/counter_reg[3]/CK
+  (Sync)rx_div/counter_reg[7]/CK
+  *DEPTH 2: tx_div/clk_reg_reg(CK->QN)
+   (Excl)tx_div/U31/B
+   *DEPTH 3: tx_div/U19(B1->Y)
+    (Excl)tx_div/U32/A
+    *DEPTH 4: scan_clk_uart_tx_clk_mux/U1(A0->Y)
+     (Sync)q1_reg/CK
+     (Sync)q2_reg/CK
+     (Sync)async_fifo/dut3/rd_ptr_reg[4]/CK
+     (Sync)async_fifo/dut3/rd_ptr_reg[0]/CK
+     (Sync)async_fifo/dut3/rd_address_reg[0]/CK
+     (Sync)async_fifo/dut3/rd_address_reg[1]/CK
+     (Sync)async_fifo/dut3/rd_address_reg[2]/CK
+     (Sync)async_fifo/dut3/rd_ptr_reg[1]/CK
+     (Sync)async_fifo/dut3/rd_ptr_reg[2]/CK
+     (Sync)async_fifo/dut3/rd_ptr_reg[3]/CK
+     (Sync)async_fifo/dut3/rd_address_reg[3]/CK
+     (Sync)async_fifo/dut5/q2_reg[0]/CK
+     (Sync)async_fifo/dut5/q2_reg[1]/CK
+     (Sync)async_fifo/dut5/q2_reg[4]/CK
+     (Sync)async_fifo/dut5/q2_reg[3]/CK
+     (Sync)async_fifo/dut5/q2_reg[2]/CK
+     (Sync)async_fifo/dut5/q1_reg[4]/CK
+     (Sync)async_fifo/dut5/q1_reg[3]/CK
+     (Sync)async_fifo/dut5/q1_reg[2]/CK
+     (Sync)async_fifo/dut5/q1_reg[1]/CK
+     (Sync)async_fifo/dut5/q1_reg[0]/CK
+     (Sync)UART_tx/uut0/current_state_reg[0]/CK
+     (Sync)UART_tx/uut0/current_state_reg[2]/CK
+     (Sync)UART_tx/uut0/current_state_reg[1]/CK
+     (Sync)UART_tx/uut1/parallel_data_reg_reg[6]/CK
+     (Sync)UART_tx/uut1/parallel_data_reg_reg[5]/CK
+     (Sync)UART_tx/uut1/parallel_data_reg_reg[4]/CK
+     (Sync)UART_tx/uut1/parallel_data_reg_reg[3]/CK
+     (Sync)UART_tx/uut1/parallel_data_reg_reg[2]/CK
+     (Sync)UART_tx/uut1/parallel_data_reg_reg[1]/CK
+     (Sync)UART_tx/uut1/parallel_data_reg_reg[7]/CK
+     (Sync)UART_tx/uut1/parallel_data_reg_reg[0]/CK
+     (Sync)UART_tx/uut1/counter_reg[2]/CK
+     (Sync)UART_tx/uut1/counter_reg[0]/CK
+     (Sync)UART_tx/uut1/counter_reg[1]/CK
+     (Sync)UART_tx/uut2/parity_bit_reg/CK
+     (Sync)pulse_gen/q_reg/CK
+     (Sync)pulse_gen/out_reg/CK
+  *DEPTH 2: tx_div/U19(A0N->Y)
+   (Excl)tx_div/U32/A
+   *DEPTH 3: scan_clk_uart_tx_clk_mux/U1(A0->Y)
+    (Sync)q1_reg/CK
+    (Sync)q2_reg/CK
+    (Sync)async_fifo/dut3/rd_ptr_reg[4]/CK
+    (Sync)async_fifo/dut3/rd_ptr_reg[0]/CK
+    (Sync)async_fifo/dut3/rd_address_reg[0]/CK
+    (Sync)async_fifo/dut3/rd_address_reg[1]/CK
+    (Sync)async_fifo/dut3/rd_address_reg[2]/CK
+    (Sync)async_fifo/dut3/rd_ptr_reg[1]/CK
+    (Sync)async_fifo/dut3/rd_ptr_reg[2]/CK
+    (Sync)async_fifo/dut3/rd_ptr_reg[3]/CK
+    (Sync)async_fifo/dut3/rd_address_reg[3]/CK
+    (Sync)async_fifo/dut5/q2_reg[0]/CK
+    (Sync)async_fifo/dut5/q2_reg[1]/CK
+    (Sync)async_fifo/dut5/q2_reg[4]/CK
+    (Sync)async_fifo/dut5/q2_reg[3]/CK
+    (Sync)async_fifo/dut5/q2_reg[2]/CK
+    (Sync)async_fifo/dut5/q1_reg[4]/CK
+    (Sync)async_fifo/dut5/q1_reg[3]/CK
+    (Sync)async_fifo/dut5/q1_reg[2]/CK
+    (Sync)async_fifo/dut5/q1_reg[1]/CK
+    (Sync)async_fifo/dut5/q1_reg[0]/CK
+    (Sync)UART_tx/uut0/current_state_reg[0]/CK
+    (Sync)UART_tx/uut0/current_state_reg[2]/CK
+    (Sync)UART_tx/uut0/current_state_reg[1]/CK
+    (Sync)UART_tx/uut1/parallel_data_reg_reg[6]/CK
+    (Sync)UART_tx/uut1/parallel_data_reg_reg[5]/CK
+    (Sync)UART_tx/uut1/parallel_data_reg_reg[4]/CK
+    (Sync)UART_tx/uut1/parallel_data_reg_reg[3]/CK
+    (Sync)UART_tx/uut1/parallel_data_reg_reg[2]/CK
+    (Sync)UART_tx/uut1/parallel_data_reg_reg[1]/CK
+    (Sync)UART_tx/uut1/parallel_data_reg_reg[7]/CK
+    (Sync)UART_tx/uut1/parallel_data_reg_reg[0]/CK
+    (Sync)UART_tx/uut1/counter_reg[2]/CK
+    (Sync)UART_tx/uut1/counter_reg[0]/CK
+    (Sync)UART_tx/uut1/counter_reg[1]/CK
+    (Sync)UART_tx/uut2/parity_bit_reg/CK
+    (Sync)pulse_gen/q_reg/CK
+    (Sync)pulse_gen/out_reg/CK
+  *DEPTH 2: rx_div/clk_reg_reg(CK->QN)
+   (Excl)rx_div/U31/B
+   *DEPTH 3: rx_div/U19(B1->Y)
+    (Excl)rx_div/U32/A
+    *DEPTH 4: scan_clk_uart_rx_clk_mux/U1(A0->Y)
+     (Sync)uart_RX/dut0/sampled_data_reg[2]/CK
+     (Sync)uart_RX/dut0/sampled_data_reg[0]/CK
+     (Sync)uart_RX/dut0/sampled_data_reg[1]/CK
+     (Sync)uart_RX/dut0/sampled_bit_reg/CK
+     (Sync)uart_RX/dut1/data_bit_counter_reg[2]/CK
+     (Sync)uart_RX/dut1/data_bit_counter_reg[1]/CK
+     (Sync)uart_RX/dut1/data_bit_counter_reg[0]/CK
+     (Sync)uart_RX/dut1/edge_counter_reg[5]/CK
+     (Sync)uart_RX/dut1/edge_counter_reg[0]/CK
+     (Sync)uart_RX/dut1/edge_counter_reg[4]/CK
+     (Sync)uart_RX/dut1/edge_counter_reg[3]/CK
+     (Sync)uart_RX/dut1/edge_counter_reg[2]/CK
+     (Sync)uart_RX/dut1/edge_counter_reg[1]/CK
+     (Sync)uart_RX/dut2/current_state_reg[2]/CK
+     (Sync)uart_RX/dut2/current_state_reg[1]/CK
+     (Sync)uart_RX/dut2/current_state_reg[0]/CK
+     (Sync)uart_RX/dut3/p_data_reg[0]/CK
+     (Sync)uart_RX/dut3/p_data_reg[7]/CK
+     (Sync)uart_RX/dut3/p_data_reg[3]/CK
+     (Sync)uart_RX/dut3/p_data_reg[6]/CK
+     (Sync)uart_RX/dut3/p_data_reg[5]/CK
+     (Sync)uart_RX/dut3/p_data_reg[2]/CK
+     (Sync)uart_RX/dut3/p_data_reg[4]/CK
+     (Sync)uart_RX/dut3/p_data_reg[1]/CK
+     (Sync)uart_RX/dut4/parity_error_reg/CK
+     (Sync)uart_RX/dut6/stop_error_reg/CK
+  *DEPTH 2: rx_div/U19(A0N->Y)
+   (Excl)rx_div/U32/A
+   *DEPTH 3: scan_clk_uart_rx_clk_mux/U1(A0->Y)
+    (Sync)uart_RX/dut0/sampled_data_reg[2]/CK
+    (Sync)uart_RX/dut0/sampled_data_reg[0]/CK
+    (Sync)uart_RX/dut0/sampled_data_reg[1]/CK
+    (Sync)uart_RX/dut0/sampled_bit_reg/CK
+    (Sync)uart_RX/dut1/data_bit_counter_reg[2]/CK
+    (Sync)uart_RX/dut1/data_bit_counter_reg[1]/CK
+    (Sync)uart_RX/dut1/data_bit_counter_reg[0]/CK
+    (Sync)uart_RX/dut1/edge_counter_reg[5]/CK
+    (Sync)uart_RX/dut1/edge_counter_reg[0]/CK
+    (Sync)uart_RX/dut1/edge_counter_reg[4]/CK
+    (Sync)uart_RX/dut1/edge_counter_reg[3]/CK
+    (Sync)uart_RX/dut1/edge_counter_reg[2]/CK
+    (Sync)uart_RX/dut1/edge_counter_reg[1]/CK
+    (Sync)uart_RX/dut2/current_state_reg[2]/CK
+    (Sync)uart_RX/dut2/current_state_reg[1]/CK
+    (Sync)uart_RX/dut2/current_state_reg[0]/CK
+    (Sync)uart_RX/dut3/p_data_reg[0]/CK
+    (Sync)uart_RX/dut3/p_data_reg[7]/CK
+    (Sync)uart_RX/dut3/p_data_reg[3]/CK
+    (Sync)uart_RX/dut3/p_data_reg[6]/CK
+    (Sync)uart_RX/dut3/p_data_reg[5]/CK
+    (Sync)uart_RX/dut3/p_data_reg[2]/CK
+    (Sync)uart_RX/dut3/p_data_reg[4]/CK
+    (Sync)uart_RX/dut3/p_data_reg[1]/CK
+    (Sync)uart_RX/dut4/parity_error_reg/CK
+    (Sync)uart_RX/dut6/stop_error_reg/CK
+
+
+
+
+
+Tracing Clock Ref_clk
+Pin scan_clk_ref_clk_mux/U1/Y is a crossover pin in Clock SCAN_CLK
+
+****** Clock Tree (Ref_clk) Structure
+Nr. Subtrees                   : 3
+Nr. Sinks                      : 324
+Nr.          Rising  Sync Pins : 324
+Nr. Inverter Rising  Sync Pins : 0
+Nr.          Falling Sync Pins : 0
+Nr. Inverter Falling Sync Pins : 0
+
+** Leaf Pins
+CELL (PORT)                            Nr.
+-----------------------------------------------
+SDFFRQX1M (CK)                          2
+SDFFSQX2M (CK)                          2
+SDFFRHQX2M (CK)                         5
+SDFFRX1M (CK)                           3
+SDFFRHQX4M (CK)                         8
+SDFFRQX2M (CK)                          296
+SDFFRHQX1M (CK)                         3
+SDFFRQX4M (CK)                          4
+SDFFSQX1M (CK)                          1
+-----------------------------------------------
+
+
+
+
+** Gate Component Input Pins
+CELL (PORT)                            Nr.
+-----------------------------------------------
+AO2B2X4M (A0)                           1
+TLATNCAX3M (CK)                         1
+-----------------------------------------------
+
+
+
+** Subtree Detail
+*DEPTH 0 Input_Pin: (EMPTY) Output_Pin: (Ref_clk) Cell: (EMPTY) Net: (Ref_clk) NO-INV
+          Nr. of Exclude Pins           : 0
+          Nr. of Total Sync Pins        : 0
+          Nr. of     Rising  Sync Pins  : 0
+          Nr. of Inv Rising  Sync Pins  : 0
+          Nr. of     Falling Sync Pins  : 0
+          Nr. of Inv Falling Sync Pins  : 0
+          Nr. of Gated Clocks           : 1
+*DEPTH 1 Input_Pin: (scan_clk_ref_clk_mux/U1/A0) Output_Pin: (scan_clk_ref_clk_mux/U1/Y) Cell: (AO2B2X4M) Net: (scan_clk_ref_clk_mux_out) NO-INV
+          Nr. of Exclude Pins           : 0
+          Nr. of Total Sync Pins        : 307
+          Nr. of     Rising  Sync Pins  : 307
+          Nr. of Inv Rising  Sync Pins  : 0
+          Nr. of     Falling Sync Pins  : 0
+          Nr. of Inv Falling Sync Pins  : 0
+          Nr. of Gated Clocks           : 1
+*DEPTH 2 Input_Pin: (clock_gating_cell/dut0/CK) Output_Pin: (clock_gating_cell/dut0/ECK) Cell: (TLATNCAX3M) Net: (gated_clk) NO-INV
+          Nr. of Exclude Pins           : 0
+          Nr. of Total Sync Pins        : 17
+          Nr. of     Rising  Sync Pins  : 17
+          Nr. of Inv Rising  Sync Pins  : 0
+          Nr. of     Falling Sync Pins  : 0
+          Nr. of Inv Falling Sync Pins  : 0
+          Nr. of Gated Clocks           : 0
+***********************************************************
+
+****** Pre CTS Detail Structure for clock Ref_clk
+*DEPTH 0: Ref_clk
+ *DEPTH 1: scan_clk_ref_clk_mux/U1(A0->Y)
+  (Sync)sys_ctrl/address_reg[1]/CK
+  (Sync)sys_ctrl/current_state_reg[2]/CK
+  (Sync)sys_ctrl/current_state_reg[0]/CK
+  (Sync)sys_ctrl/current_state_reg[3]/CK
+  (Sync)sys_ctrl/current_state_reg[1]/CK
+  (Sync)sys_ctrl/address_reg[2]/CK
+  (Sync)sys_ctrl/address_reg[3]/CK
+  (Sync)sys_ctrl/address_reg[0]/CK
+  (Sync)data_sync/dut1/enable_sync_reg_reg[0]/CK
+  (Sync)data_sync/dut1/enable_sync_reg_reg[1]/CK
+  (Sync)data_sync/dut2/q_reg/CK
+  (Sync)data_sync/dut2/out_reg/CK
+  (Sync)data_sync/dut3/sync_bus_reg[7]/CK
+  (Sync)data_sync/dut3/sync_bus_reg[3]/CK
+  (Sync)data_sync/dut3/sync_bus_reg[6]/CK
+  (Sync)data_sync/dut3/sync_bus_reg[5]/CK
+  (Sync)data_sync/dut3/sync_bus_reg[0]/CK
+  (Sync)data_sync/dut3/sync_bus_reg[4]/CK
+  (Sync)data_sync/dut3/sync_bus_reg[2]/CK
+  (Sync)data_sync/dut3/sync_bus_reg[1]/CK
+  (Sync)register_file/rddata_reg[7]/CK
+  (Sync)register_file/rddata_reg[6]/CK
+  (Sync)register_file/rddata_reg[5]/CK
+  (Sync)register_file/rddata_reg[4]/CK
+  (Sync)register_file/rddata_reg[3]/CK
+  (Sync)register_file/rddata_reg[2]/CK
+  (Sync)register_file/rddata_reg[1]/CK
+  (Sync)register_file/rddata_reg[0]/CK
+  (Sync)register_file/reg_file_reg[5][7]/CK
+  (Sync)register_file/reg_file_reg[5][6]/CK
+  (Sync)register_file/reg_file_reg[5][5]/CK
+  (Sync)register_file/reg_file_reg[5][4]/CK
+  (Sync)register_file/reg_file_reg[5][3]/CK
+  (Sync)register_file/reg_file_reg[5][2]/CK
+  (Sync)register_file/reg_file_reg[5][1]/CK
+  (Sync)register_file/reg_file_reg[5][0]/CK
+  (Sync)register_file/reg_file_reg[9][7]/CK
+  (Sync)register_file/reg_file_reg[9][6]/CK
+  (Sync)register_file/reg_file_reg[9][5]/CK
+  (Sync)register_file/reg_file_reg[9][4]/CK
+  (Sync)register_file/reg_file_reg[9][3]/CK
+  (Sync)register_file/reg_file_reg[9][2]/CK
+  (Sync)register_file/reg_file_reg[9][1]/CK
+  (Sync)register_file/reg_file_reg[9][0]/CK
+  (Sync)register_file/reg_file_reg[13][7]/CK
+  (Sync)register_file/reg_file_reg[13][6]/CK
+  (Sync)register_file/reg_file_reg[13][5]/CK
+  (Sync)register_file/reg_file_reg[13][4]/CK
+  (Sync)register_file/reg_file_reg[13][3]/CK
+  (Sync)register_file/reg_file_reg[13][2]/CK
+  (Sync)register_file/reg_file_reg[13][1]/CK
+  (Sync)register_file/reg_file_reg[13][0]/CK
+  (Sync)register_file/reg_file_reg[7][7]/CK
+  (Sync)register_file/reg_file_reg[7][6]/CK
+  (Sync)register_file/reg_file_reg[7][5]/CK
+  (Sync)register_file/reg_file_reg[7][4]/CK
+  (Sync)register_file/reg_file_reg[7][3]/CK
+  (Sync)register_file/reg_file_reg[7][2]/CK
+  (Sync)register_file/reg_file_reg[7][1]/CK
+  (Sync)register_file/reg_file_reg[7][0]/CK
+  (Sync)register_file/reg_file_reg[11][7]/CK
+  (Sync)register_file/reg_file_reg[11][6]/CK
+  (Sync)register_file/reg_file_reg[11][5]/CK
+  (Sync)register_file/reg_file_reg[11][4]/CK
+  (Sync)register_file/reg_file_reg[11][3]/CK
+  (Sync)register_file/reg_file_reg[11][2]/CK
+  (Sync)register_file/reg_file_reg[11][1]/CK
+  (Sync)register_file/reg_file_reg[11][0]/CK
+  (Sync)register_file/reg_file_reg[15][7]/CK
+  (Sync)register_file/reg_file_reg[15][6]/CK
+  (Sync)register_file/reg_file_reg[15][5]/CK
+  (Sync)register_file/reg_file_reg[15][4]/CK
+  (Sync)register_file/reg_file_reg[15][3]/CK
+  (Sync)register_file/reg_file_reg[15][2]/CK
+  (Sync)register_file/reg_file_reg[15][1]/CK
+  (Sync)register_file/reg_file_reg[15][0]/CK
+  (Sync)register_file/reg_file_reg[6][7]/CK
+  (Sync)register_file/reg_file_reg[6][6]/CK
+  (Sync)register_file/reg_file_reg[6][5]/CK
+  (Sync)register_file/reg_file_reg[6][4]/CK
+  (Sync)register_file/reg_file_reg[6][3]/CK
+  (Sync)register_file/reg_file_reg[6][2]/CK
+  (Sync)register_file/reg_file_reg[6][1]/CK
+  (Sync)register_file/reg_file_reg[6][0]/CK
+  (Sync)register_file/reg_file_reg[10][7]/CK
+  (Sync)register_file/reg_file_reg[10][6]/CK
+  (Sync)register_file/reg_file_reg[10][5]/CK
+  (Sync)register_file/reg_file_reg[10][4]/CK
+  (Sync)register_file/reg_file_reg[10][3]/CK
+  (Sync)register_file/reg_file_reg[10][2]/CK
+  (Sync)register_file/reg_file_reg[10][1]/CK
+  (Sync)register_file/reg_file_reg[10][0]/CK
+  (Sync)register_file/reg_file_reg[14][7]/CK
+  (Sync)register_file/reg_file_reg[14][6]/CK
+  (Sync)register_file/reg_file_reg[14][5]/CK
+  (Sync)register_file/reg_file_reg[14][4]/CK
+  (Sync)register_file/reg_file_reg[14][3]/CK
+  (Sync)register_file/reg_file_reg[14][2]/CK
+  (Sync)register_file/reg_file_reg[14][1]/CK
+  (Sync)register_file/reg_file_reg[14][0]/CK
+  (Sync)register_file/reg_file_reg[4][7]/CK
+  (Sync)register_file/reg_file_reg[4][6]/CK
+  (Sync)register_file/reg_file_reg[4][5]/CK
+  (Sync)register_file/reg_file_reg[4][4]/CK
+  (Sync)register_file/reg_file_reg[4][3]/CK
+  (Sync)register_file/reg_file_reg[4][2]/CK
+  (Sync)register_file/reg_file_reg[4][1]/CK
+  (Sync)register_file/reg_file_reg[4][0]/CK
+  (Sync)register_file/reg_file_reg[8][7]/CK
+  (Sync)register_file/reg_file_reg[8][6]/CK
+  (Sync)register_file/reg_file_reg[8][5]/CK
+  (Sync)register_file/reg_file_reg[8][4]/CK
+  (Sync)register_file/reg_file_reg[8][3]/CK
+  (Sync)register_file/reg_file_reg[8][2]/CK
+  (Sync)register_file/reg_file_reg[8][1]/CK
+  (Sync)register_file/reg_file_reg[8][0]/CK
+  (Sync)register_file/reg_file_reg[12][7]/CK
+  (Sync)register_file/reg_file_reg[12][6]/CK
+  (Sync)register_file/reg_file_reg[12][4]/CK
+  (Sync)register_file/reg_file_reg[12][3]/CK
+  (Sync)register_file/reg_file_reg[12][2]/CK
+  (Sync)register_file/reg_file_reg[12][1]/CK
+  (Sync)register_file/reg_file_reg[12][0]/CK
+  (Sync)register_file/rddata_valid_reg/CK
+  (Sync)register_file/reg_file_reg[1][6]/CK
+  (Sync)register_file/reg_file_reg[1][1]/CK
+  (Sync)register_file/reg_file_reg[0][7]/CK
+  (Sync)register_file/reg_file_reg[0][6]/CK
+  (Sync)register_file/reg_file_reg[0][5]/CK
+  (Sync)register_file/reg_file_reg[0][4]/CK
+  (Sync)register_file/reg_file_reg[0][3]/CK
+  (Sync)register_file/reg_file_reg[0][2]/CK
+  (Sync)register_file/reg_file_reg[0][1]/CK
+  (Sync)register_file/reg_file_reg[0][0]/CK
+  (Sync)register_file/reg_file_reg[2][1]/CK
+  (Sync)register_file/reg_file_reg[2][0]/CK
+  (Sync)register_file/reg_file_reg[1][7]/CK
+  (Sync)register_file/reg_file_reg[1][5]/CK
+  (Sync)register_file/reg_file_reg[1][4]/CK
+  (Sync)register_file/reg_file_reg[1][3]/CK
+  (Sync)register_file/reg_file_reg[1][2]/CK
+  (Sync)register_file/reg_file_reg[1][0]/CK
+  (Sync)register_file/reg_file_reg[3][5]/CK
+  (Sync)register_file/reg_file_reg[3][0]/CK
+  (Sync)register_file/reg_file_reg[3][1]/CK
+  (Sync)register_file/reg_file_reg[3][4]/CK
+  (Sync)register_file/reg_file_reg[3][6]/CK
+  (Sync)register_file/reg_file_reg[3][3]/CK
+  (Sync)register_file/reg_file_reg[3][2]/CK
+  (Sync)register_file/reg_file_reg[3][7]/CK
+  (Sync)register_file/reg_file_reg[2][4]/CK
+  (Sync)register_file/reg_file_reg[2][2]/CK
+  (Sync)register_file/reg_file_reg[2][5]/CK
+  (Sync)register_file/reg_file_reg[2][6]/CK
+  (Sync)register_file/reg_file_reg[2][7]/CK
+  (Sync)register_file/reg_file_reg[2][3]/CK
+  (Sync)register_file/reg_file_reg[12][5]/CK
+  (Sync)async_fifo/dut1/w_address_reg[3]/CK
+  (Sync)async_fifo/dut1/w_address_reg[0]/CK
+  (Sync)async_fifo/dut1/w_address_reg[2]/CK
+  (Sync)async_fifo/dut1/w_address_reg[1]/CK
+  (Sync)async_fifo/dut1/wr_ptr_reg[4]/CK
+  (Sync)async_fifo/dut1/wr_ptr_reg[0]/CK
+  (Sync)async_fifo/dut1/wr_ptr_reg[3]/CK
+  (Sync)async_fifo/dut1/wr_ptr_reg[2]/CK
+  (Sync)async_fifo/dut1/wr_ptr_reg[1]/CK
+  (Sync)async_fifo/dut2/fifo_reg[1][7]/CK
+  (Sync)async_fifo/dut2/fifo_reg[1][6]/CK
+  (Sync)async_fifo/dut2/fifo_reg[1][5]/CK
+  (Sync)async_fifo/dut2/fifo_reg[1][4]/CK
+  (Sync)async_fifo/dut2/fifo_reg[1][3]/CK
+  (Sync)async_fifo/dut2/fifo_reg[1][2]/CK
+  (Sync)async_fifo/dut2/fifo_reg[1][1]/CK
+  (Sync)async_fifo/dut2/fifo_reg[1][0]/CK
+  (Sync)async_fifo/dut2/fifo_reg[5][7]/CK
+  (Sync)async_fifo/dut2/fifo_reg[5][6]/CK
+  (Sync)async_fifo/dut2/fifo_reg[5][5]/CK
+  (Sync)async_fifo/dut2/fifo_reg[5][4]/CK
+  (Sync)async_fifo/dut2/fifo_reg[5][3]/CK
+  (Sync)async_fifo/dut2/fifo_reg[5][2]/CK
+  (Sync)async_fifo/dut2/fifo_reg[5][1]/CK
+  (Sync)async_fifo/dut2/fifo_reg[9][7]/CK
+  (Sync)async_fifo/dut2/fifo_reg[9][6]/CK
+  (Sync)async_fifo/dut2/fifo_reg[9][5]/CK
+  (Sync)async_fifo/dut2/fifo_reg[9][4]/CK
+  (Sync)async_fifo/dut2/fifo_reg[9][3]/CK
+  (Sync)async_fifo/dut2/fifo_reg[9][2]/CK
+  (Sync)async_fifo/dut2/fifo_reg[9][1]/CK
+  (Sync)async_fifo/dut2/fifo_reg[9][0]/CK
+  (Sync)async_fifo/dut2/fifo_reg[13][7]/CK
+  (Sync)async_fifo/dut2/fifo_reg[13][6]/CK
+  (Sync)async_fifo/dut2/fifo_reg[13][5]/CK
+  (Sync)async_fifo/dut2/fifo_reg[13][4]/CK
+  (Sync)async_fifo/dut2/fifo_reg[13][3]/CK
+  (Sync)async_fifo/dut2/fifo_reg[13][2]/CK
+  (Sync)async_fifo/dut2/fifo_reg[13][1]/CK
+  (Sync)async_fifo/dut2/fifo_reg[13][0]/CK
+  (Sync)async_fifo/dut2/fifo_reg[3][7]/CK
+  (Sync)async_fifo/dut2/fifo_reg[3][6]/CK
+  (Sync)async_fifo/dut2/fifo_reg[3][5]/CK
+  (Sync)async_fifo/dut2/fifo_reg[3][4]/CK
+  (Sync)async_fifo/dut2/fifo_reg[3][3]/CK
+  (Sync)async_fifo/dut2/fifo_reg[3][2]/CK
+  (Sync)async_fifo/dut2/fifo_reg[3][1]/CK
+  (Sync)async_fifo/dut2/fifo_reg[3][0]/CK
+  (Sync)async_fifo/dut2/fifo_reg[7][7]/CK
+  (Sync)async_fifo/dut2/fifo_reg[7][6]/CK
+  (Sync)async_fifo/dut2/fifo_reg[7][5]/CK
+  (Sync)async_fifo/dut2/fifo_reg[7][4]/CK
+  (Sync)async_fifo/dut2/fifo_reg[7][3]/CK
+  (Sync)async_fifo/dut2/fifo_reg[7][2]/CK
+  (Sync)async_fifo/dut2/fifo_reg[7][1]/CK
+  (Sync)async_fifo/dut2/fifo_reg[7][0]/CK
+  (Sync)async_fifo/dut2/fifo_reg[11][7]/CK
+  (Sync)async_fifo/dut2/fifo_reg[11][6]/CK
+  (Sync)async_fifo/dut2/fifo_reg[11][5]/CK
+  (Sync)async_fifo/dut2/fifo_reg[11][4]/CK
+  (Sync)async_fifo/dut2/fifo_reg[11][3]/CK
+  (Sync)async_fifo/dut2/fifo_reg[11][2]/CK
+  (Sync)async_fifo/dut2/fifo_reg[11][1]/CK
+  (Sync)async_fifo/dut2/fifo_reg[11][0]/CK
+  (Sync)async_fifo/dut2/fifo_reg[15][7]/CK
+  (Sync)async_fifo/dut2/fifo_reg[15][6]/CK
+  (Sync)async_fifo/dut2/fifo_reg[15][5]/CK
+  (Sync)async_fifo/dut2/fifo_reg[15][4]/CK
+  (Sync)async_fifo/dut2/fifo_reg[15][3]/CK
+  (Sync)async_fifo/dut2/fifo_reg[15][1]/CK
+  (Sync)async_fifo/dut2/fifo_reg[15][0]/CK
+  (Sync)async_fifo/dut2/fifo_reg[2][7]/CK
+  (Sync)async_fifo/dut2/fifo_reg[2][6]/CK
+  (Sync)async_fifo/dut2/fifo_reg[2][5]/CK
+  (Sync)async_fifo/dut2/fifo_reg[2][4]/CK
+  (Sync)async_fifo/dut2/fifo_reg[2][3]/CK
+  (Sync)async_fifo/dut2/fifo_reg[2][2]/CK
+  (Sync)async_fifo/dut2/fifo_reg[2][1]/CK
+  (Sync)async_fifo/dut2/fifo_reg[2][0]/CK
+  (Sync)async_fifo/dut2/fifo_reg[6][7]/CK
+  (Sync)async_fifo/dut2/fifo_reg[6][6]/CK
+  (Sync)async_fifo/dut2/fifo_reg[6][5]/CK
+  (Sync)async_fifo/dut2/fifo_reg[6][4]/CK
+  (Sync)async_fifo/dut2/fifo_reg[6][3]/CK
+  (Sync)async_fifo/dut2/fifo_reg[6][2]/CK
+  (Sync)async_fifo/dut2/fifo_reg[6][1]/CK
+  (Sync)async_fifo/dut2/fifo_reg[6][0]/CK
+  (Sync)async_fifo/dut2/fifo_reg[10][7]/CK
+  (Sync)async_fifo/dut2/fifo_reg[10][6]/CK
+  (Sync)async_fifo/dut2/fifo_reg[10][5]/CK
+  (Sync)async_fifo/dut2/fifo_reg[10][4]/CK
+  (Sync)async_fifo/dut2/fifo_reg[10][3]/CK
+  (Sync)async_fifo/dut2/fifo_reg[10][2]/CK
+  (Sync)async_fifo/dut2/fifo_reg[10][1]/CK
+  (Sync)async_fifo/dut2/fifo_reg[10][0]/CK
+  (Sync)async_fifo/dut2/fifo_reg[14][7]/CK
+  (Sync)async_fifo/dut2/fifo_reg[14][6]/CK
+  (Sync)async_fifo/dut2/fifo_reg[14][5]/CK
+  (Sync)async_fifo/dut2/fifo_reg[14][4]/CK
+  (Sync)async_fifo/dut2/fifo_reg[14][3]/CK
+  (Sync)async_fifo/dut2/fifo_reg[14][2]/CK
+  (Sync)async_fifo/dut2/fifo_reg[14][1]/CK
+  (Sync)async_fifo/dut2/fifo_reg[14][0]/CK
+  (Sync)async_fifo/dut2/fifo_reg[0][7]/CK
+  (Sync)async_fifo/dut2/fifo_reg[0][6]/CK
+  (Sync)async_fifo/dut2/fifo_reg[0][5]/CK
+  (Sync)async_fifo/dut2/fifo_reg[0][4]/CK
+  (Sync)async_fifo/dut2/fifo_reg[0][3]/CK
+  (Sync)async_fifo/dut2/fifo_reg[0][2]/CK
+  (Sync)async_fifo/dut2/fifo_reg[0][1]/CK
+  (Sync)async_fifo/dut2/fifo_reg[0][0]/CK
+  (Sync)async_fifo/dut2/fifo_reg[4][7]/CK
+  (Sync)async_fifo/dut2/fifo_reg[4][6]/CK
+  (Sync)async_fifo/dut2/fifo_reg[4][5]/CK
+  (Sync)async_fifo/dut2/fifo_reg[4][4]/CK
+  (Sync)async_fifo/dut2/fifo_reg[4][3]/CK
+  (Sync)async_fifo/dut2/fifo_reg[4][2]/CK
+  (Sync)async_fifo/dut2/fifo_reg[4][1]/CK
+  (Sync)async_fifo/dut2/fifo_reg[4][0]/CK
+  (Sync)async_fifo/dut2/fifo_reg[8][7]/CK
+  (Sync)async_fifo/dut2/fifo_reg[8][6]/CK
+  (Sync)async_fifo/dut2/fifo_reg[8][5]/CK
+  (Sync)async_fifo/dut2/fifo_reg[8][4]/CK
+  (Sync)async_fifo/dut2/fifo_reg[8][3]/CK
+  (Sync)async_fifo/dut2/fifo_reg[8][2]/CK
+  (Sync)async_fifo/dut2/fifo_reg[8][1]/CK
+  (Sync)async_fifo/dut2/fifo_reg[8][0]/CK
+  (Sync)async_fifo/dut2/fifo_reg[12][7]/CK
+  (Sync)async_fifo/dut2/fifo_reg[12][6]/CK
+  (Sync)async_fifo/dut2/fifo_reg[12][5]/CK
+  (Sync)async_fifo/dut2/fifo_reg[12][4]/CK
+  (Sync)async_fifo/dut2/fifo_reg[12][3]/CK
+  (Sync)async_fifo/dut2/fifo_reg[12][2]/CK
+  (Sync)async_fifo/dut2/fifo_reg[12][1]/CK
+  (Sync)async_fifo/dut2/fifo_reg[12][0]/CK
+  (Sync)async_fifo/dut2/fifo_reg[5][0]/CK
+  (Sync)async_fifo/dut2/fifo_reg[15][2]/CK
+  (Sync)async_fifo/dut4/q2_reg[4]/CK
+  (Sync)async_fifo/dut4/q2_reg[3]/CK
+  (Sync)async_fifo/dut4/q2_reg[2]/CK
+  (Sync)async_fifo/dut4/q2_reg[1]/CK
+  (Sync)async_fifo/dut4/q2_reg[0]/CK
+  (Sync)async_fifo/dut4/q1_reg[4]/CK
+  (Sync)async_fifo/dut4/q1_reg[3]/CK
+  (Sync)async_fifo/dut4/q1_reg[2]/CK
+  (Sync)async_fifo/dut4/q1_reg[1]/CK
+  (Sync)async_fifo/dut4/q1_reg[0]/CK
+  (Sync)ref_clk_rst_sync/syn_rst_reg_reg[0]/CK
+  (Sync)ref_clk_rst_sync/syn_rst_reg_reg[2]/CK
+  (Sync)ref_clk_rst_sync/syn_rst_reg_reg[1]/CK
+  *DEPTH 2: clock_gating_cell/dut0(CK->ECK)
+   (Sync)alu/out_valid_reg/CK
+   (Sync)alu/alu_out_reg[7]/CK
+   (Sync)alu/alu_out_reg[6]/CK
+   (Sync)alu/alu_out_reg[5]/CK
+   (Sync)alu/alu_out_reg[4]/CK
+   (Sync)alu/alu_out_reg[3]/CK
+   (Sync)alu/alu_out_reg[2]/CK
+   (Sync)alu/alu_out_reg[1]/CK
+   (Sync)alu/alu_out_reg[0]/CK
+   (Sync)alu/alu_out_reg[15]/CK
+   (Sync)alu/alu_out_reg[14]/CK
+   (Sync)alu/alu_out_reg[13]/CK
+   (Sync)alu/alu_out_reg[12]/CK
+   (Sync)alu/alu_out_reg[11]/CK
+   (Sync)alu/alu_out_reg[10]/CK
+   (Sync)alu/alu_out_reg[9]/CK
+   (Sync)alu/alu_out_reg[8]/CK

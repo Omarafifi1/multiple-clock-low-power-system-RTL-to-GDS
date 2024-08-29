@@ -1,0 +1,187 @@
+#######################################################
+#                                                     #
+#  Encounter Command Logging File                     #
+#  Created on Wed Aug 28 22:12:42 2024                #
+#                                                     #
+#######################################################
+
+#@(#)CDS: First Encounter v08.10-p004_1 (32bit) 11/04/2008 14:34 (Linux 2.6)
+#@(#)CDS: NanoRoute v08.10-p008 NR081027-0018/USR58-UB (database version 2.30, 67.1.1) {superthreading v1.11}
+#@(#)CDS: CeltIC v08.10-p002_1 (32bit) 10/23/2008 22:04:14 (Linux 2.6.9-67.0.10.ELsmp)
+#@(#)CDS: CTE v08.10-p016_1 (32bit) Oct 26 2008 15:11:51 (Linux 2.6.9-67.0.10.ELsmp)
+#@(#)CDS: CPE v08.10-p009
+
+setUIVar rda_Input ui_topcell system_TOP
+setUIVar rda_Input ui_netlist /home/ahesham/Projects/System_pnr/DFT/netlists/system_TOP.v
+setUIVar rda_Input ui_timelib,min /home/ahesham/Projects/System_pnr/std_cells/libs/scmetro_tsmc_cl013g_rvt_ff_1p32v_m40c.lib
+setUIVar rda_Input ui_timelib,max /home/ahesham/Projects/System_pnr/std_cells/libs/scmetro_tsmc_cl013g_rvt_ss_1p08v_125c.lib
+setUIVar rda_Input ui_timelib /home/ahesham/Projects/System_pnr/std_cells/libs/scmetro_tsmc_cl013g_rvt_tt_1p2v_25c.lib
+setUIVar rda_Input ui_leffile {/home/ahesham/Projects/System_pnr/std_cells/lef/tsmc13fsg_7lm_tech.lef /home/ahesham/Projects/System_pnr/std_cells/lef/tsmc13_m_macros.lef}
+setUIVar rda_Input ui_captbl_file /home/ahesham/Projects/System_pnr/std_cells/captables/tsmc13fsg.capTbl
+setUIVar rda_Input ui_timingcon_file /home/ahesham/Projects/System_pnr/DFT/sdc/system_TOP_func.sdc
+setUIVar rda_Input ui_pwrnet VDD
+setUIVar rda_Input ui_gndnet VSS
+commitConfig
+create_library_set -name min_library -timing "../std_cells/libs/scmetro_tsmc_cl013g_rvt_ff_1p32v_m40c.lib"
+create_library_set -name max_library -timing "../std_cells/libs/scmetro_tsmc_cl013g_rvt_ss_1p08v_125c.lib"
+create_library_set -name typ_library -timing "../std_cells/libs/scmetro_tsmc_cl013g_rvt_tt_1p2v_25c.lib"
+create_constraint_mode -name func_mode -sdc_files {../DFT/sdc/system_TOP_func.sdc}
+create_constraint_mode -name scan_mode -sdc_files {../DFT/sdc/system_TOP_scan.sdc}
+create_constraint_mode -name capture_mode -sdc_files {../DFT/sdc/system_TOP_capture.sdc}
+create_rc_corner -name RCcorner -cap_table "../std_cells/captables/tsmc13fsg.capTbl"
+create_delay_corner -name min_corner -library_set min_library -rc_corner RCcorner
+create_delay_corner -name max_corner -library_set max_library -rc_corner RCcorner
+create_analysis_view -name setup1_analysis_view -delay_corner max_corner -constraint_mode func_mode
+create_analysis_view -name hold1_analysis_view  -delay_corner min_corner -constraint_mode func_mode
+create_analysis_view -name setup2_analysis_view -delay_corner max_corner -constraint_mode capture_mode
+create_analysis_view -name hold2_analysis_view  -delay_corner min_corner -constraint_mode capture_mode
+create_analysis_view -name setup3_analysis_view -delay_corner max_corner -constraint_mode scan_mode
+create_analysis_view -name hold3_analysis_view  -delay_corner min_corner -constraint_mode scan_mode
+set_analysis_view -setup {setup1_analysis_view setup2_analysis_view setup3_analysis_view } \
+                  -hold { hold1_analysis_view hold2_analysis_view hold3_analysis_view}
+loadFPlan ./system_TOP.fp
+placeDesign -inPlaceOpt -prePlaceOpt
+addTieHiLo -cell TIELOM -prefix LTIE
+addTieHiLo -cell TIEHIM -prefix HTIE
+globalNetConnect VDD -type pgpin -pin VDD -inst *
+globalNetConnect VSS -type pgpin -pin VSS -inst *
+setDrawView fplan
+setDrawView ameba
+setDrawView place
+getFillerMode -quiet
+uiSetTool stretchWire
+uiSetTool select
+zoomBox 247.945 164.882 -13.392 149.431
+zoomBox 123.921 169.862 76.362 146.782
+panPage -1 0
+panPage -1 0
+panPage 1 0
+panPage 1 0
+panPage 1 0
+panPage 1 0
+panPage 1 0
+panPage 0 -1
+panPage 0 -1
+panPage 0 -1
+panPage 0 -1
+panPage 0 -1
+panPage 0 -1
+panPage 0 -1
+panPage 0 1
+panPage -1 0
+panPage 0 -1
+panPage -1 0
+panPage -1 0
+panPage -1 0
+panPage -1 0
+verifyGeometry -noMinArea
+verifyConnectivity -type all -noAntenna -error 1000 -warning 50
+clearDrc
+clearDrc
+clearDrc
+clearDrc
+clearDrc
+clearDrc
+clearDrc
+clearDrc
+setDrawView fplan
+setDrawView ameba
+setDrawView fplan
+setDrawView place
+clearClockDomains
+setClockDomains -all
+timeDesign -preCTS -idealClock -pathReports -drvReports -slackReports -numPaths 50 -prefix system_TOP_preCTS -outDir timingReports
+clockDesign -genSpecOnly Clock.ctstch
+clockDesign -specFile Clock.ctstch -outDir clock_report -fixedInstBeforeCTS
+verifyGeometry -noMinArea
+refinePlace -preserveRouting
+setNanoRouteMode -routeWithEco true
+setNanoRouteMode -droutePostRouteSwapVia true
+globalDetailRoute
+verifyGeometry -noMinArea
+verifyConnectivity -type all -noAntenna -error 1000 -warning 50
+addFiller -cell {FILL1M FILL2M FILL4M FILL8M FILL16M FILL32M FILL64M} -prefix FILLER -markFixed
+setDrawView ameba
+setDrawView fplan
+setDrawView fplan
+setDrawView ameba
+setDrawView place
+setLayerPreference allM0 -isVisible 0
+setLayerPreference allM1 -isVisible 0
+setLayerPreference allM2 -isVisible 0
+setLayerPreference allM3 -isVisible 0
+setLayerPreference allM4 -isVisible 0
+setLayerPreference allM5 -isVisible 0
+setLayerPreference allM6 -isVisible 0
+setLayerPreference allM7 -isVisible 0
+setLayerPreference allM1Cont -isVisible 0
+setLayerPreference allM2Cont -isVisible 0
+setLayerPreference allM3Cont -isVisible 0
+setLayerPreference allM4Cont -isVisible 0
+setLayerPreference allM5Cont -isVisible 0
+setLayerPreference allM6Cont -isVisible 0
+setLayerPreference allM7Cont -isVisible 0
+setLayerPreference allM0 -isVisible 1
+setLayerPreference allM1 -isVisible 1
+setLayerPreference allM2 -isVisible 1
+setLayerPreference allM3 -isVisible 1
+setLayerPreference allM4 -isVisible 1
+setLayerPreference allM5 -isVisible 1
+setLayerPreference allM6 -isVisible 1
+setLayerPreference allM7 -isVisible 1
+setLayerPreference allM1Cont -isVisible 1
+setLayerPreference allM2Cont -isVisible 1
+setLayerPreference allM3Cont -isVisible 1
+setLayerPreference allM4Cont -isVisible 1
+setLayerPreference allM5Cont -isVisible 1
+setLayerPreference allM6Cont -isVisible 1
+setLayerPreference allM7Cont -isVisible 1
+verifyGeometry -noMinArea
+verifyConnectivity -type all -noAntenna -error 1000 -warning 50
+checkFiller -highlight true
+clearClockDomains
+setClockDomains -all
+timeDesign -postRoute -pathReports -drvReports -slackReports -numPaths 50 -prefix system_TOP_postRoute -outDir timingReports
+clearClockDomains
+setClockDomains -all
+timeDesign -postRoute -hold -pathReports -slackReports -numPaths 50 -prefix system_TOP_postRoute -outDir timingReports
+optDesign -postRoute -hold
+optDesign -postRoute -hold
+optDesign -postRoute -hold -incr
+deleteFiller
+setLayerPreference allM0 -isVisible 0
+setLayerPreference allM1 -isVisible 0
+setLayerPreference allM2 -isVisible 0
+setLayerPreference allM3 -isVisible 0
+setLayerPreference allM4 -isVisible 0
+setLayerPreference allM5 -isVisible 0
+setLayerPreference allM6 -isVisible 0
+setLayerPreference allM7 -isVisible 0
+setLayerPreference allM1Cont -isVisible 0
+setLayerPreference allM2Cont -isVisible 0
+setLayerPreference allM3Cont -isVisible 0
+setLayerPreference allM4Cont -isVisible 0
+setLayerPreference allM5Cont -isVisible 0
+setLayerPreference allM6Cont -isVisible 0
+setLayerPreference allM7Cont -isVisible 0
+setDrawView fplan
+setDrawView place
+findCoreFillerCells -all
+deleteFiller -cell FILL16M FILL4M FILLTIEM FILLCAP8M FILLCAP64M
+setDrawView place
+setDrawView fplan
+setDrawView place
+deleteFiller -cell FILL16M FILL4M FILLTIEM FILLCAP8M FILLCAP64M
+uiSetTool defineArea ::Rda_Placement::WinPlace::setWindow
+zoomBox 245.364 163.810 -17.704 -4.591
+deleteFiller -cell FILL16M FILL4M FILLTIEM FILLCAP8M FILLCAP64M -area
+optDesign -postRoute -hold -incr
+optDesign -postRoute -hold -incr
+optDesign -postRoute -incr
+clearClockDomains
+setClockDomains -all
+timeDesign -postRoute -pathReports -slackReports -numPaths 50 -prefix system_TOP_postRoute -outDir timingReports
+clearClockDomains
+setClockDomains -all
+timeDesign -postRoute -hold -pathReports -slackReports -numPaths 50 -prefix system_TOP_postRoute -outDir timingReports
+uiSetTool select

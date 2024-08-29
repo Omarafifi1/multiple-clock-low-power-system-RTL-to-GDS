@@ -1,0 +1,5 @@
+# struct_name_map
+enable_sync_reg[0]
+enable_sync_reg_reg[0]
+enable_sync_reg[1]
+enable_sync_reg_reg[1]

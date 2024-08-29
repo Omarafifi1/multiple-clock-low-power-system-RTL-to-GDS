@@ -1,0 +1,242 @@
+#######################################################
+#                                                     #
+#  Encounter Command Logging File                     #
+#  Created on Wed Aug 28 21:36:58 2024                #
+#                                                     #
+#######################################################
+
+#@(#)CDS: First Encounter v08.10-p004_1 (32bit) 11/04/2008 14:34 (Linux 2.6)
+#@(#)CDS: NanoRoute v08.10-p008 NR081027-0018/USR58-UB (database version 2.30, 67.1.1) {superthreading v1.11}
+#@(#)CDS: CeltIC v08.10-p002_1 (32bit) 10/23/2008 22:04:14 (Linux 2.6.9-67.0.10.ELsmp)
+#@(#)CDS: CTE v08.10-p016_1 (32bit) Oct 26 2008 15:11:51 (Linux 2.6.9-67.0.10.ELsmp)
+#@(#)CDS: CPE v08.10-p009
+
+setUIVar rda_Input ui_topcell system_TOP
+setUIVar rda_Input ui_netlist /home/ahesham/Projects/System_pnr/DFT/netlists/system_TOP.v
+setUIVar rda_Input ui_timelib,min /home/ahesham/Projects/System_pnr/std_cells/libs/scmetro_tsmc_cl013g_rvt_ff_1p32v_m40c.lib
+setUIVar rda_Input ui_timelib,max /home/ahesham/Projects/System_pnr/std_cells/libs/scmetro_tsmc_cl013g_rvt_ss_1p08v_125c.lib
+setUIVar rda_Input ui_timelib /home/ahesham/Projects/System_pnr/std_cells/libs/scmetro_tsmc_cl013g_rvt_tt_1p2v_25c.lib
+setUIVar rda_Input ui_leffile {/home/ahesham/Projects/System_pnr/std_cells/lef/tsmc13fsg_7lm_tech.lef /home/ahesham/Projects/System_pnr/std_cells/lef/tsmc13_m_macros.lef}
+setUIVar rda_Input ui_captbl_file /home/ahesham/Projects/System_pnr/std_cells/captables/tsmc13fsg.capTbl
+setUIVar rda_Input ui_timingcon_file /home/ahesham/Projects/System_pnr/DFT/sdc/system_TOP_func.sdc
+setUIVar rda_Input ui_pwrnet VDD
+setUIVar rda_Input ui_gndnet VSS
+commitConfig
+create_library_set -name min_library -timing "../std_cells/libs/scmetro_tsmc_cl013g_rvt_ff_1p32v_m40c.lib"
+create_library_set -name max_library -timing "../std_cells/libs/scmetro_tsmc_cl013g_rvt_ss_1p08v_125c.lib"
+create_library_set -name typ_library -timing "../std_cells/libs/scmetro_tsmc_cl013g_rvt_tt_1p2v_25c.lib"
+create_constraint_mode -name func_mode -sdc_files {../DFT/sdc/system_TOP_func.sdc}
+create_constraint_mode -name scan_mode -sdc_files {../DFT/sdc/system_TOP_scan.sdc}
+create_constraint_mode -name capture_mode -sdc_files {../DFT/sdc/system_TOP_capture.sdc}
+create_rc_corner -name RCcorner -cap_table "../std_cells/captables/tsmc13fsg.capTbl"
+create_delay_corner -name min_corner -library_set min_library -rc_corner RCcorner
+create_delay_corner -name max_corner -library_set max_library -rc_corner RCcorner
+create_analysis_view -name setup1_analysis_view -delay_corner max_corner -constraint_mode func_mode
+create_analysis_view -name hold1_analysis_view  -delay_corner min_corner -constraint_mode func_mode
+create_analysis_view -name setup2_analysis_view -delay_corner max_corner -constraint_mode capture_mode
+create_analysis_view -name hold2_analysis_view  -delay_corner min_corner -constraint_mode capture_mode
+create_analysis_view -name setup3_analysis_view -delay_corner max_corner -constraint_mode scan_mode
+create_analysis_view -name hold3_analysis_view  -delay_corner min_corner -constraint_mode scan_mode
+set_analysis_view -setup {setup1_analysis_view setup2_analysis_view setup3_analysis_view } \
+                  -hold { hold1_analysis_view hold2_analysis_view hold3_analysis_view}
+loadFPlan ./system_TOP.fp
+zoomBox 262.430 182.493 204.746 99.475
+zoomBox 246.985 165.655 232.929 142.960
+setDrawView fplan
+selectObject Module uart_RX
+uiSetTool move
+setObjFPlanBox Module uart_RX 172.8905 111.2715 233.488 151.7095
+uiSetTool select
+deselectAll
+zoomBox 253.946 163.201 140.938 104.362
+selectObject Module uart_RX
+deselectAll
+selectObject Module uart_RX
+zoomBox 250.522 162.267 169.890 66.382
+deselectAll
+selectWire 6.1500 120.8200 234.1100 121.0800 1 VDD
+deselectAll
+uiSetTool move
+uiSetTool move
+setLayerPreference allM1 -isVisible 0
+setObjFPlanBox Module uart_RX 173.020 103.717 233.700 152.520
+setLayerPreference allM1 -isVisible 1
+zoomBox 247.628 157.856 160.394 149.710
+zoomBox 170.078 156.712 178.435 150.308
+zoomBox 243.672 109.343 208.182 95.334
+zoomBox 234.331 104.293 230.010 102.228
+zoomBox 242.738 160.088 226.861 96.891
+zoomBox 245.779 157.859 227.276 98.228
+uiSetTool move
+setObjFPlanBox Module uart_RX 173.020 103.730 234.162 152.520
+zoomBox 235.949 154.809 231.847 141.874
+setObjFPlanBox Module uart_RX 173.020 103.730 234.343 152.520
+undo
+setObjFPlanBox Module uart_RX 173.020 103.730 234.298 152.520
+setObjFPlanBox Module uart_RX 173.020 103.730 234.298 152.520
+zoomBox 199.776 159.154 174.871 135.494
+selectObject Module async_fifo
+panPage -1 0
+panPage 1 0
+panPage -1 0
+panPage 1 0
+panPage -1 0
+deselectAll
+selectObject Module register_file
+uiSetTool select
+deselectAll
+selectObject Module alu
+deselectAll
+selectObject Module async_fifo
+deselectAll
+selectObject Module register_file
+panPage 1 0
+deselectAll
+placeDesign -inPlaceOpt -prePlaceOpt
+addTieHiLo -cell TIELOM -prefix LTIE
+addTieHiLo -cell TIEHIM -prefix HTIE
+globalNetConnect VDD -type pgpin -pin VDD -inst *
+globalNetConnect VSS -type pgpin -pin VSS -inst *
+setDrawView place
+setDrawView ameba
+setDrawView place
+setDrawView ameba
+setDrawView fplan
+setDrawView ameba
+setDrawView place
+verifyGeometry -noMinArea
+setDrawView fplan
+setDrawView ameba
+setDrawView place
+setDrawView ameba
+selectObject Module async_fifo
+deselectAll
+selectObject Module register_file
+deselectAll
+selectObject Module alu
+deselectAll
+selectObject Module uart_RX
+setDrawView place
+deselectAll
+clearClockDomains
+setClockDomains -all
+timeDesign -preCTS -idealClock -pathReports -drvReports -slackReports -numPaths 50 -prefix system_TOP_preCTS -outDir timingReports
+optDesign -preCTS -incr
+setDrawView ameba
+setDrawView place
+zoomBox 71.514 56.419 97.665 43.655
+verifyGeometry -noMinArea
+clockDesign -genSpecOnly Clock.ctstch
+clockDesign -specFile Clock.ctstch -outDir clock_report -fixedInstBeforeCTS
+verifyGeometry -noMinArea
+panCenter 266.709 160.399
+zoomBox 264.685 150.904 210.828 88.951
+zoomBox 245.132 137.355 213.554 101.626
+zoomBox 244.876 127.084 222.569 111.709
+zoomBox 235.146 118.624 231.621 114.909
+zoomBox 233.190 117.052 232.430 116.344
+selectMarker 232.5750 116.5450 232.7750 116.7450 2 1 6
+clearDrc
+verifyGeometry -noMinArea
+zoomBox 165.531 127.711 106.070 40.542
+zoomBox 168.470 112.645 113.124 65.140
+zoomBox 163.712 104.267 127.685 79.467
+zoomBox 154.161 101.249 138.853 89.921
+zoomBox 149.614 98.332 144.578 93.996
+zoomBox 147.925 97.269 145.938 95.609
+zoomBox 147.446 96.930 146.649 96.382
+selectMarker 146.8400 96.4550 147.1300 96.6550 2 1 6
+deselectAll
+selectMarker 146.8400 96.4550 147.1300 96.6550 2 1 6
+clearClockDomains
+setClockDomains -all
+timeDesign -postCTS -pathReports -drvReports -slackReports -numPaths 50 -prefix system_TOP_postCTS -outDir timingReports
+optDesign -postCTS -incr
+clearClockDomains
+setClockDomains -all
+timeDesign -postCTS -hold -pathReports -slackReports -numPaths 50 -prefix system_TOP_postCTS -outDir timingReports
+optDesign -postCTS -incr
+optDesign -postCTS -hold -incr
+optDesign -postCTS -hold -incr
+optDesign -postCTS -hold
+deselectAll
+clearClockDomains
+setClockDomains -all
+timeDesign -postCTS -pathReports -drvReports -slackReports -numPaths 50 -prefix system_TOP_postCTS -outDir timingReports
+clearClockDomains
+setClockDomains -all
+timeDesign -postCTS -hold -pathReports -slackReports -numPaths 50 -prefix system_TOP_postCTS -outDir timingReports
+selectInst alu/U112
+zoomBox 182.654 65.448 148.409 38.052
+zoomBox 175.654 57.572 165.217 51.291
+setLayerPreference implant0 -isVisible 1
+setLayerPreference implant0 -isVisible 0
+setLayerPreference inst -isVisible 0
+setLayerPreference inst -isVisible 1
+setLayerPreference inst -isVisible 0
+setLayerPreference inst -isVisible 1
+setLayerPreference inst -isVisible 0
+setLayerPreference inst -isVisible 1
+setLayerPreference inst -isVisible 0
+setLayerPreference inst -isVisible 1
+setDrawView ameba
+setDrawView fplan
+zoomBox 167.400 125.532 98.910 71.051
+zoomBox 166.833 116.404 130.993 98.436
+panCenter 160.159 106.570
+panCenter 172.560 107.324
+panCenter 170.651 107.725
+zoomBox 172.592 107.773 171.149 105.431
+deselectAll
+selectMarker 171.8950 106.6350 172.0950 107.3600 2 1 6
+deselectAll
+selectMarker 171.8950 106.6350 172.0950 107.3600 2 1 6
+deleteSelectedFromFPlan
+zoomBox 117.588 155.730 70.579 131.447
+zoomBox 96.846 150.548 90.678 139.927
+selectMarker 94.4050 142.3300 94.6050 148.3600 4 1 6
+windowSelect 94.558 147.177 93.865 147.120
+zoomBox 95.626 145.996 93.715 144.292
+selectInst {register_file/reg_file_reg[12][4]}
+deselectAll
+zoomBox 221.569 142.654 192.616 95.023
+zoomBox 220.912 134.590 211.083 122.073
+zoomBox 218.525 131.764 216.008 130.395
+selectMarker 217.4050 130.8950 217.6050 131.0950 2 1 6
+deselectAll
+zoomBox 161.484 111.211 118.834 104.674
+zoomBox 135.520 108.191 119.942 106.052
+selectMarker 120.2350 107.1150 134.7850 107.3150 3 1 6
+deselectAll
+selectMarker 120.2350 107.1150 134.7850 107.3150 3 1 6
+deselectAll
+selectInst {UART_tx/uut0/current_state_reg[2]}
+panPage 0 1
+panPage 0 1
+deselectAll
+setDrawView place
+clearDrc
+refinePlace -preserveRouting
+setNanoRouteMode -routeWithEco true
+setNanoRouteMode -droutePostRouteSwapVia true
+globalDetailRoute
+setDrawView ameba
+setDrawView fplan
+setDrawView place
+setDrawView ameba
+setDrawView place
+verifyGeometry -noMinArea
+verifyConnectivity -type all -noAntenna -error 1000 -warning 50
+clearClockDomains
+setClockDomains -all
+timeDesign -postRoute -pathReports -drvReports -slackReports -numPaths 50 -prefix system_TOP_postRoute -outDir timingReports
+clearClockDomains
+setClockDomains -all
+timeDesign -postRoute -hold -pathReports -slackReports -numPaths 50 -prefix system_TOP_postRoute -outDir timingReports
+setDrawView fplan
+setDrawView ameba
+selectObject Module alu
+setDrawView place
+deselectAll
+report_timing -machine_readable -max_points 10000 -max_slack 0.75 > top.mtarpt
+load_timing_debug_report -name default_report top.mtarpt

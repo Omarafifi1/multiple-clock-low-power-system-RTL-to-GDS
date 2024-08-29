@@ -1,0 +1,94 @@
+ 
+****************************************
+Report : area
+Design : system_TOP
+Version: K-2015.06
+Date   : Thu Aug 29 00:22:04 2024
+****************************************
+
+Information: Updating design information... (UID-85)
+Warning: A non-unate path in clock network for clock 'SCAN_CLK'
+ from pin 'rx_div/U32/Y' is detected. (TIM-052)
+Library(s) Used:
+
+    scmetro_tsmc_cl013g_rvt_ss_1p08v_125c (File: /home/IC/FINAL_PROJECT/DFT/std_cells/scmetro_tsmc_cl013g_rvt_ss_1p08v_125c.db)
+
+Number of ports:                          875
+Number of nets:                          2910
+Number of cells:                         2012
+Number of combinational cells:           1543
+Number of sequential cells:               421
+Number of macros/black boxes:               0
+Number of buf/inv:                        300
+Number of references:                      35
+
+Combinational area:              14725.224061
+Buf/Inv area:                     1227.298124
+Noncombinational area:           13537.933994
+Macro/Black Box area:                0.000000
+Net Interconnect area:      undefined  (No wire load specified)
+
+Total cell area:                 28263.158055
+Total area:                 undefined
+
+Hierarchical area distribution
+------------------------------
+
+                                  Global cell area            Local cell area
+                                  -------------------  ------------------------------ 
+Hierarchical cell                 Absolute    Percent  Combi-      Noncombi-   Black-
+                                  Total       Total    national    national    boxes   Design
+--------------------------------  ----------  -------  ----------  ----------  ------  ---------------------------
+system_TOP                        28263.1581    100.0    196.5089     67.0719  0.0000  system_TOP
+UART_tx                             910.7658      3.2      7.0602      0.0000  0.0000  UART_tx_TOP_MODULE_test_1
+UART_tx/uu3                          32.9476      0.1     32.9476      0.0000  0.0000  mux
+UART_tx/uut0                        203.5691      0.7    104.7263     98.8428  0.0000  fsm_controller_test_1
+UART_tx/uut1                        533.0451      1.9    168.2681    364.7770  0.0000  serilaizer_test_1
+UART_tx/uut2                        134.1438      0.5    101.1962     32.9476  0.0000  parity_calc_test_1
+alu                                5789.3641     20.5   1134.3388    560.1092  0.0000  bit16_alu_test_1
+alu/add_21                          231.8099      0.8    231.8099      0.0000  0.0000  bit16_alu_DW01_add_0
+alu/div_30                         1437.9274      5.1   1437.9274      0.0000  0.0000  bit16_alu_DW_div_uns_0
+alu/mult_27                        2159.2445      7.6   1918.0210      0.0000  0.0000  bit16_alu_DW02_mult_0
+alu/mult_27/FS_1                    241.2235      0.9    241.2235      0.0000  0.0000  bit16_alu_DW01_add_1
+alu/sub_24                          265.9342      0.9    265.9342      0.0000  0.0000  bit16_alu_DW01_sub_0
+async_fifo                         8634.6249     30.6     14.1204      0.0000  0.0000  fifo_top_test_1
+async_fifo/dut1                     601.2937      2.1    252.9905    296.5284  0.0000  full_gen_test_1
+async_fifo/dut1/wr_ptr_gc            51.7748      0.2     51.7748      0.0000  0.0000  grey_code_gen_0
+async_fifo/dut2                    6753.0815     23.9   2516.9614   4236.1202  0.0000  fifo_memory_test_1
+async_fifo/dut3                     607.1772      2.1    258.8740    296.5284  0.0000  empty_gen_test_1
+async_fifo/dut3/rd_ptr_gc            51.7748      0.2     51.7748      0.0000  0.0000  grey_code_gen_1
+async_fifo/dut4                     329.4760      1.2      0.0000    329.4760  0.0000  synchronizer_test_0
+async_fifo/dut5                     329.4760      1.2      0.0000    329.4760  0.0000  synchronizer_test_1
+clock_gating_cell                    16.4738      0.1      0.0000     16.4738  0.0000  clock_gating
+data_sync                           480.0936      1.7      0.0000      0.0000  0.0000  data_sync_top_module_test_1
+data_sync/dut1                       65.8952      0.2      0.0000     65.8952  0.0000  enable_sync_test_1
+data_sync/dut2                       71.7787      0.3      5.8835     65.8952  0.0000  pulse_gen_test_0
+data_sync/dut3                      342.4197      1.2     78.8389    263.5808  0.0000  enabled_ff_test_1
+pulse_gen                            71.7787      0.3      5.8835     65.8952  0.0000  pulse_gen_test_1
+ref_clk_rst_sync                     98.8428      0.3      0.0000     98.8428  0.0000  rst_synchronizer_test_0
+register_file                      7146.0994     25.3   2616.9809   4529.1185  0.0000  RF_test_1
+rx_div                              833.1036      2.9    428.3188    297.7051  0.0000  clk_div_test_0
+rx_div/add_21_aco                   107.0797      0.4    107.0797      0.0000  0.0000  clk_div_1_DW01_inc_0
+scan_clk_ref_clk_mux                 12.9437      0.0     12.9437      0.0000  0.0000  mux_2x1_6
+scan_clk_uart_clk_mux                11.7670      0.0     11.7670      0.0000  0.0000  mux_2x1_0
+scan_clk_uart_rx_clk_mux             11.7670      0.0     11.7670      0.0000  0.0000  mux_2x1_4
+scan_clk_uart_tx_clk_mux             11.7670      0.0     11.7670      0.0000  0.0000  mux_2x1_5
+scan_rst1_mux                        11.7670      0.0     11.7670      0.0000  0.0000  mux_2x1_2
+scan_rst2_mux                        11.7670      0.0     11.7670      0.0000  0.0000  mux_2x1_1
+scan_rst_mux                         11.7670      0.0     11.7670      0.0000  0.0000  mux_2x1_3
+sys_ctrl                            927.2396      3.3    660.1287    267.1109  0.0000  sys_ctrl_test_1
+tx_div                              833.1036      2.9    428.3188    297.7051  0.0000  clk_div_test_1
+tx_div/add_21_aco                   107.0797      0.4    107.0797      0.0000  0.0000  clk_div_0_DW01_inc_0
+uart_RX                            2075.6988      7.3     14.1204      0.0000  0.0000  RX_TOP_MODULE_test_1
+uart_RX/dut0                        192.9788      0.7     61.1884    131.7904  0.0000  data_sampler_test_1
+uart_RX/dut1                       1024.9057      3.6    728.3773    296.5284  0.0000  edge_bit_counter_test_1
+uart_RX/dut2                        260.0507      0.9    161.2079     98.8428  0.0000  fsm_test_1
+uart_RX/dut3                        355.3634      1.3     91.7826    263.5808  0.0000  deserializer_test_1
+uart_RX/dut4                        155.3244      0.5    121.2001     34.1243  0.0000  parity_check_test_1
+uart_RX/dut5                         12.9437      0.0     12.9437      0.0000  0.0000  start_check
+uart_RX/dut6                         60.0117      0.2     25.8874     34.1243  0.0000  stop_check_test_1
+uart_clk_rst_sync                    98.8428      0.3      0.0000     98.8428  0.0000  rst_synchronizer_test_1
+--------------------------------  ----------  -------  ----------  ----------  ------  ---------------------------
+Total                                                  14725.2241  13537.9340  0.0000
+
+1

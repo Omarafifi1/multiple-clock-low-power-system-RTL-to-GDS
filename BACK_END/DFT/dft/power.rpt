@@ -1,0 +1,88 @@
+Information: Propagating switching activity (low effort zero delay simulation). (PWR-6)
+Warning: Design has unannotated primary inputs. (PWR-414)
+Warning: Design has unannotated sequential cell outputs. (PWR-415)
+ 
+****************************************
+Report : power
+        -hier
+        -analysis_effort low
+Design : system_TOP
+Version: K-2015.06
+Date   : Thu Aug 29 00:22:05 2024
+****************************************
+
+
+Library(s) Used:
+
+    scmetro_tsmc_cl013g_rvt_ss_1p08v_125c (File: /home/IC/FINAL_PROJECT/DFT/std_cells/scmetro_tsmc_cl013g_rvt_ss_1p08v_125c.db)
+
+
+Operating Conditions: scmetro_tsmc_cl013g_rvt_ss_1p08v_125c   Library: scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+Wire Load Model Mode: top
+
+
+Global Operating Voltage = 1.08 
+Power-specific unit information :
+    Voltage Units = 1V
+    Capacitance Units = 1.000000pf
+    Time Units = 1ns
+    Dynamic Power Units = 1mW    (derived from V,C,T units)
+    Leakage Power Units = 1pW
+
+
+--------------------------------------------------------------------------------
+                                       Switch   Int      Leak     Total
+Hierarchy                              Power    Power    Power    Power    %
+--------------------------------------------------------------------------------
+system_TOP                             3.75e-02    0.150 1.65e+07    0.204 100.0
+  pulse_gen (pulse_gen_test_1)         2.00e-05 7.17e-04 3.31e+04 7.70e-04   0.4
+  rx_div (clk_div_test_0)              1.23e-04 2.62e-03 6.26e+05 3.37e-03   1.7
+    add_21_aco (clk_div_1_DW01_inc_0)  1.66e-06 4.04e-06 9.76e+04 1.03e-04   0.1
+  tx_div (clk_div_test_1)              2.12e-04 3.49e-03 6.16e+05 4.32e-03   2.1
+    add_21_aco (clk_div_0_DW01_inc_0)  1.85e-05 4.08e-05 9.72e+04 1.56e-04   0.1
+  clock_gating_cell (clock_gating)     3.67e-03 1.74e-03 1.30e+04 5.43e-03   2.7
+  uart_clk_rst_sync (rst_synchronizer_test_1)
+                                       9.10e-06 1.03e-03 4.20e+04 1.08e-03   0.5
+  ref_clk_rst_sync (rst_synchronizer_test_0)
+                                       6.94e-06 9.78e-04 4.18e+04 1.03e-03   0.5
+  UART_tx (UART_tx_TOP_MODULE_test_1)  2.35e-03 5.03e-03 5.22e+05 7.90e-03   3.9
+    uu3 (mux)                          1.44e-03 8.00e-05 2.96e+04 1.55e-03   0.8
+    uut2 (parity_calc_test_1)          1.30e-05 2.92e-04 1.15e+05 4.19e-04   0.2
+    uut1 (serilaizer_test_1)           1.74e-04 3.13e-03 2.56e+05 3.56e-03   1.7
+    uut0 (fsm_controller_test_1)       2.56e-04 1.46e-03 1.16e+05 1.84e-03   0.9
+  async_fifo (fifo_top_test_1)         7.66e-03 4.79e-02 4.53e+06 6.01e-02  29.5
+    dut5 (synchronizer_test_1)         8.88e-07 2.59e-03 1.33e+05 2.73e-03   1.3
+    dut4 (synchronizer_test_0)         7.56e-06 2.77e-03 1.34e+05 2.91e-03   1.4
+    dut3 (empty_gen_test_1)            2.24e-04 2.99e-03 3.90e+05 3.60e-03   1.8
+      rd_ptr_gc (grey_code_gen_1)      2.24e-05 7.03e-05 5.12e+04 1.44e-04   0.1
+    dut2 (fifo_memory_test_1)          6.22e-03 3.71e-02 3.47e+06 4.68e-02  23.0
+    dut1 (full_gen_test_1)             1.72e-05 2.39e-03 3.89e+05 2.79e-03   1.4
+      wr_ptr_gc (grey_code_gen_0)      5.24e-07 1.87e-06 5.10e+04 5.34e-05   0.0
+  alu (bit16_alu_test_1)               7.04e-05 2.53e-02 4.28e+06 2.96e-02  14.6
+    mult_27 (bit16_alu_DW02_mult_0)    1.52e-06 3.54e-07 1.66e+06 1.66e-03   0.8
+    add_21 (bit16_alu_DW01_add_0)      1.99e-07 2.74e-06 2.05e+05 2.08e-04   0.1
+    sub_24 (bit16_alu_DW01_sub_0)      2.29e-07 2.75e-06 2.48e+05 2.51e-04   0.1
+    div_30 (bit16_alu_DW_div_uns_0)    2.52e-06 1.55e-05 1.24e+06 1.26e-03   0.6
+  register_file (RF_test_1)            6.77e-03 4.11e-02 3.65e+06 5.15e-02  25.3
+  uart_RX (RX_TOP_MODULE_test_1)       3.11e-03 1.11e-02 1.25e+06 1.54e-02   7.6
+    dut6 (stop_check_test_1)           1.75e-04 3.51e-04 3.37e+04 5.60e-04   0.3
+    dut5 (start_check)                    0.000    0.000 9.45e+03 9.45e-06   0.0
+    dut4 (parity_check_test_1)         1.14e-03 5.83e-04 1.34e+05 1.86e-03   0.9
+    dut3 (deserializer_test_1)         2.07e-04 3.34e-03 1.66e+05 3.71e-03   1.8
+    dut2 (fsm_test_1)                  2.39e-04 1.36e-03 1.31e+05 1.73e-03   0.8
+    dut1 (edge_bit_counter_test_1)     5.22e-04 4.19e-03 6.80e+05 5.40e-03   2.6
+    dut0 (data_sampler_test_1)         3.10e-05 1.19e-03 8.56e+04 1.30e-03   0.6
+  data_sync (data_sync_top_module_test_1)
+                                       6.75e-07 3.09e-03 2.09e+05 3.30e-03   1.6
+    dut3 (enabled_ff_test_1)           3.51e-07 2.06e-03 1.52e+05 2.21e-03   1.1
+    dut2 (pulse_gen_test_0)            2.77e-07 5.15e-04 3.11e+04 5.46e-04   0.3
+    dut1 (enable_sync_test_1)          4.81e-08 5.15e-04 2.66e+04 5.41e-04   0.3
+  sys_ctrl (sys_ctrl_test_1)           6.33e-04 3.14e-03 5.13e+05 4.29e-03   2.1
+  scan_rst2_mux (mux_2x1_1)            4.81e-05 7.74e-05 5.82e+03 1.31e-04   0.1
+  scan_rst1_mux (mux_2x1_2)            1.95e-05 7.43e-05 5.80e+03 9.96e-05   0.0
+  scan_rst_mux (mux_2x1_3)             1.75e-04 8.41e-05 6.19e+03 2.66e-04   0.1
+  scan_clk_uart_rx_clk_mux (mux_2x1_4) 5.65e-04 1.72e-04 6.19e+03 7.43e-04   0.4
+  scan_clk_uart_tx_clk_mux (mux_2x1_5) 8.26e-04 1.75e-04 6.19e+03 1.01e-03   0.5
+  scan_clk_ref_clk_mux (mux_2x1_6)     6.77e-03 3.64e-04 1.06e+04 7.14e-03   3.5
+  scan_clk_uart_clk_mux (mux_2x1_0)    4.90e-04 1.71e-04 6.19e+03 6.67e-04   0.3
+1

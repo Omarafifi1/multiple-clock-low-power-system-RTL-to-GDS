@@ -1,0 +1,87 @@
+ 
+****************************************
+Report : area
+Design : system_TOP
+Version: K-2015.06
+Date   : Wed Aug 28 22:23:09 2024
+****************************************
+
+Information: Updating design information... (UID-85)
+Warning: A non-unate path in clock network for clock 'UART_CLK'
+ from pin 'rx_div/U23/Y' is detected. (TIM-052)
+Library(s) Used:
+
+    scmetro_tsmc_cl013g_rvt_ss_1p08v_125c (File: /home/IC/FINAL_PROJECT/synthesis/std_cells/scmetro_tsmc_cl013g_rvt_ss_1p08v_125c.db)
+
+Number of ports:                          745
+Number of nets:                          2814
+Number of cells:                         2027
+Number of combinational cells:           1563
+Number of sequential cells:               423
+Number of macros/black boxes:               0
+Number of buf/inv:                        286
+Number of references:                      24
+
+Combinational area:              15683.057873
+Buf/Inv area:                     1139.045623
+Noncombinational area:           10699.732988
+Macro/Black Box area:                0.000000
+Net Interconnect area:      undefined  (No wire load specified)
+
+Total cell area:                 26382.790861
+Total area:                 undefined
+
+Hierarchical area distribution
+------------------------------
+
+                                  Global cell area            Local cell area
+                                  -------------------  ------------------------------ 
+Hierarchical cell                 Absolute    Percent  Combi-      Noncombi-   Black-
+                                  Total       Total    national    national    boxes   Design
+--------------------------------  ----------  -------  ----------  ----------  ------  ----------------------
+system_TOP                        26382.7909    100.0    100.0195     52.9515  0.0000  system_TOP
+UART_tx                             795.4492      3.0      0.0000      0.0000  0.0000  UART_tx_TOP_MODULE
+UART_tx/uu3                          32.9476      0.1     32.9476      0.0000  0.0000  mux
+UART_tx/uut0                        180.0351      0.7    101.1962     78.8389  0.0000  fsm_controller
+UART_tx/uut1                        455.3829      1.7    168.2681    287.1148  0.0000  serilaizer
+UART_tx/uut2                        127.0836      0.5    101.1962     25.8874  0.0000  parity_calc
+alu                                6980.1845     26.5   1288.4865    440.0858  0.0000  bit16_alu
+alu/add_21                          244.7536      0.9    244.7536      0.0000  0.0000  bit16_alu_DW01_add_0
+alu/div_30                         2585.2099      9.8   2585.2099      0.0000  0.0000  bit16_alu_DW_div_uns_1
+alu/mult_27                        2155.7144      8.2   1914.4909      0.0000  0.0000  bit16_alu_DW02_mult_0
+alu/mult_27/FS_1                    241.2235      0.9    241.2235      0.0000  0.0000  bit16_alu_DW01_add_1
+alu/sub_24                          265.9342      1.0    265.9342      0.0000  0.0000  bit16_alu_DW01_sub_0
+async_fifo                         7377.9090     28.0     14.1204      0.0000  0.0000  fifo_top
+async_fifo/dut1                     537.7519      2.0    252.9905    232.9866  0.0000  full_gen
+async_fifo/dut1/wr_ptr_gc            51.7748      0.2     51.7748      0.0000  0.0000  grey_code_gen_0
+async_fifo/dut2                    5764.6533     21.9   2451.0662   3313.5872  0.0000  fifo_memory
+async_fifo/dut3                     543.6354      2.1    258.8740    232.9866  0.0000  empty_gen
+async_fifo/dut3/rd_ptr_gc            51.7748      0.2     51.7748      0.0000  0.0000  grey_code_gen_1
+async_fifo/dut4                     258.8740      1.0      0.0000    258.8740  0.0000  synchronizer_0
+async_fifo/dut5                     258.8740      1.0      0.0000    258.8740  0.0000  synchronizer_1
+clock_gating_cell                    16.4738      0.1      0.0000     16.4738  0.0000  clock_gating
+data_sync                           395.3712      1.5      0.0000      0.0000  0.0000  data_sync_top_module
+data_sync/dut1                       51.7748      0.2      0.0000     51.7748  0.0000  enable_sync
+data_sync/dut2                       57.6583      0.2      5.8835     51.7748  0.0000  pulse_gen_1
+data_sync/dut3                      285.9381      1.1     78.8389    207.0992  0.0000  enabled_ff
+pulse_gen                            57.6583      0.2      5.8835     51.7748  0.0000  pulse_gen_0
+ref_clk_rst_sync                     77.6622      0.3      0.0000     77.6622  0.0000  rst_synchronizer_0
+register_file                      6192.9721     23.5   2608.7440   3584.2282  0.0000  RF
+rx_div                              769.5618      2.9    428.3188    234.1633  0.0000  clk_div_1
+rx_div/add_21_aco                   107.0797      0.4    107.0797      0.0000  0.0000  clk_div_1_DW01_inc_0
+sys_ctrl                            870.7580      3.3    660.1287    210.6293  0.0000  sys_ctrl
+tx_div                              769.5618      2.9    428.3188    234.1633  0.0000  clk_div_0
+tx_div/add_21_aco                   107.0797      0.4    107.0797      0.0000  0.0000  clk_div_0_DW01_inc_0
+uart_RX                            1848.5957      7.0      7.0602      0.0000  0.0000  RX_TOP_MODULE
+uart_RX/dut0                        158.8545      0.6     50.5981    108.2564  0.0000  data_sampler
+uart_RX/dut1                        961.3639      3.6    717.7870    243.5769  0.0000  edge_bit_counter
+uart_RX/dut2                        231.8099      0.9    150.6176     81.1923  0.0000  fsm
+uart_RX/dut3                        283.5847      1.1     67.0719    216.5128  0.0000  deserializer
+uart_RX/dut4                        145.9108      0.6    110.6098     35.3010  0.0000  parity_check
+uart_RX/dut5                         12.9437      0.0     12.9437      0.0000  0.0000  start_check
+uart_RX/dut6                         47.0680      0.2     11.7670     35.3010  0.0000  stop_check
+uart_clk_rst_sync                    77.6622      0.3      0.0000     77.6622  0.0000  rst_synchronizer_1
+--------------------------------  ----------  -------  ----------  ----------  ------  ----------------------
+Total                                                  15683.0579  10699.7330  0.0000
+
+1

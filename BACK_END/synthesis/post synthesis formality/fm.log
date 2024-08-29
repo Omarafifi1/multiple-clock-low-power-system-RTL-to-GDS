@@ -1,0 +1,245 @@
+
+                                 Formality (R)
+
+               Version L-2016.03-SP1 for linux64 - Apr 13, 2016 
+
+                    Copyright (c) 1988 - 2016 Synopsys, Inc.
+   This software and the associated documentation are proprietary to Synopsys,
+ Inc. This software may only be used in accordance with the terms and conditions
+ of a written license agreement with Synopsys, Inc. All other use, reproduction,
+            or distribution of this software is strictly prohibited.
+
+  ** Highlights of Formality (R) Version L-2016.03 **
+   - New alternate verification strategies for resolving inconclusive verifications
+   - Automation for deploying alternate strategies
+   - New command to export the mapping of reference to implementation registers
+   - New capability to combine PG and low power information from db libraries with Verilog functional models
+
+   * Please refer to the Formality Release Notes for details and additional enhancements
+
+Build: 4031317
+Hostname: IC (RHEL64)
+Current time: Wed Aug 28 22:18:06 2024
+
+Loading db file '/opt/Synopsys/Formality2016/libraries/syn/gtech.db'
+set synopsys_auto_setup true
+true
+lappend search_path "/home/IC/FINAL_PROJECT/synthesis/std_cells"
+/home/IC/FINAL_PROJECT/synthesis/std_cells
+lappend search_path "/home/IC/FINAL_PROJECT/synthesis/rtl"
+/home/IC/FINAL_PROJECT/synthesis/std_cells /home/IC/FINAL_PROJECT/synthesis/rtl
+set_svf "/home/IC/FINAL_PROJECT/synthesis/syn/system_TOP.svf"
+SVF set to '/home/IC/FINAL_PROJECT/synthesis/syn/system_TOP.svf'.
+1
+read_verilog -container r [glob  "/home/IC/FINAL_PROJECT/synthesis/rtl/*.v"]
+No target library specified, default is WORK
+Initializing DesignWare ...
+Initialization Complete
+Loading verilog file '/home/IC/FINAL_PROJECT/synthesis/rtl/uart_rx_data_sampling.v'
+Loading verilog file '/home/IC/FINAL_PROJECT/synthesis/rtl/data_sync_top_module.v'
+Loading verilog file '/home/IC/FINAL_PROJECT/synthesis/rtl/system_TOP.v'
+Loading verilog file '/home/IC/FINAL_PROJECT/synthesis/rtl/Register_File.v'
+Loading verilog file '/home/IC/FINAL_PROJECT/synthesis/rtl/uart_rx_stop_check.v'
+Loading verilog file '/home/IC/FINAL_PROJECT/synthesis/rtl/async_fifo_memory.v'
+Loading verilog file '/home/IC/FINAL_PROJECT/synthesis/rtl/ALU.v'
+Loading verilog file '/home/IC/FINAL_PROJECT/synthesis/rtl/uart_rx_start_check.v'
+Loading verilog file '/home/IC/FINAL_PROJECT/synthesis/rtl/clock_divider.v'
+Loading verilog file '/home/IC/FINAL_PROJECT/synthesis/rtl/uart_tx_fsm_control.v'
+Loading verilog file '/home/IC/FINAL_PROJECT/synthesis/rtl/uart_rx_TOP_MODULE.v'
+Loading verilog file '/home/IC/FINAL_PROJECT/synthesis/rtl/uart_tx_serializer.v'
+Loading verilog file '/home/IC/FINAL_PROJECT/synthesis/rtl/sys_ctrl.v'
+Loading verilog file '/home/IC/FINAL_PROJECT/synthesis/rtl/uart_rx_deserializer.v'
+Loading verilog file '/home/IC/FINAL_PROJECT/synthesis/rtl/data_sync_enabled_ff.v'
+Loading verilog file '/home/IC/FINAL_PROJECT/synthesis/rtl/async_fifo_grey_coding_gen.v'
+Loading verilog file '/home/IC/FINAL_PROJECT/synthesis/rtl/uart_tx_TOP_MODULE.v'
+Loading verilog file '/home/IC/FINAL_PROJECT/synthesis/rtl/clock_gating_cell.v'
+Loading verilog file '/home/IC/FINAL_PROJECT/synthesis/rtl/reset_synchronizer.v'
+Loading verilog file '/home/IC/FINAL_PROJECT/synthesis/rtl/uart_tx_mux.v'
+Loading verilog file '/home/IC/FINAL_PROJECT/synthesis/rtl/async_fifo_rdptr_and_empty_flag_generation.v'
+Loading verilog file '/home/IC/FINAL_PROJECT/synthesis/rtl/data_sync_enable_synchronizer.v'
+Loading verilog file '/home/IC/FINAL_PROJECT/synthesis/rtl/async_fifo_wrptr_and_full_flag_generation.v'
+Loading verilog file '/home/IC/FINAL_PROJECT/synthesis/rtl/async_fifo_top_module.v'
+Loading verilog file '/home/IC/FINAL_PROJECT/synthesis/rtl/pulse_gen.v'
+Loading verilog file '/home/IC/FINAL_PROJECT/synthesis/rtl/uart_rx_parity_check.v'
+Loading verilog file '/home/IC/FINAL_PROJECT/synthesis/rtl/uart_tx_parity_calc.v'
+Loading verilog file '/home/IC/FINAL_PROJECT/synthesis/rtl/uart_rx_fsm.v'
+Loading verilog file '/home/IC/FINAL_PROJECT/synthesis/rtl/async_fifo_double_synchronizer.v'
+Loading verilog file '/home/IC/FINAL_PROJECT/synthesis/rtl/uart_rx_edge_bit_counter.v'
+Current container set to 'r'
+1
+read_db -container r "scmetro_tsmc_cl013g_rvt_ss_1p08v_125c.db"
+Loading db file '/home/IC/FINAL_PROJECT/synthesis/std_cells/scmetro_tsmc_cl013g_rvt_ss_1p08v_125c.db'
+1
+set_top system_TOP
+Setting top design to 'r:/WORK/system_TOP'
+Status:   Elaborating design system_TOP   ...  
+Status:   Elaborating design sys_ctrl   ...  
+Status:   Elaborating design data_sync_top_module   ...  
+Status:   Elaborating design enable_sync   ...  
+Status:   Elaborating design pulse_gen   ...  
+Status:   Elaborating design enabled_ff   ...  
+Status:   Elaborating design RX_TOP_MODULE   ...  
+Status:   Elaborating design data_sampler   ...  
+Status:   Elaborating design edge_bit_counter   ...  
+Status:   Elaborating design fsm   ...  
+Status:   Elaborating design deserializer   ...  
+Status:   Elaborating design parity_check   ...  
+Status:   Elaborating design start_check   ...  
+Status:   Elaborating design stop_check   ...  
+Status:   Elaborating design RF   ...  
+Status:   Elaborating design bit16_alu   ...  
+Status:   Elaborating design fifo_top   ...  
+Status:   Elaborating design full_gen   ...  
+Status:   Elaborating design grey_code_gen   ...  
+Status:   Elaborating design fifo_memory   ...  
+Status:   Elaborating design empty_gen   ...  
+Status:   Elaborating design synchronizer   ...  
+Status:   Elaborating design UART_tx_TOP_MODULE   ...  
+Status:   Elaborating design fsm_controller   ...  
+Status:   Elaborating design serilaizer   ...  
+Status:   Elaborating design parity_calc   ...  
+Status:   Elaborating design mux   ...  
+Status:   Elaborating design rst_synchronizer   ...  
+Status:   Elaborating design clock_gating   ...  
+Status:   Elaborating design clk_div   ...  
+Status:  Implementing inferred operators...
+
+************ Library Checking Summary ************
+Warning:  1 unlinked power cell(s) with unread pg pins.
+        Use 'report_libraries -defects all' for more details.
+**************************************************
+
+Top design successfully set to 'r:/WORK/system_TOP'
+Reference design set to 'r:/WORK/system_TOP'
+1
+read_verilog -netlist -container i "/home/IC/FINAL_PROJECT/synthesis/syn/TOP_MODULE.v"
+No target library specified, default is WORK
+Loading verilog file '/home/IC/FINAL_PROJECT/synthesis/syn/TOP_MODULE.v'
+Current container set to 'i'
+1
+read_db -container i "scmetro_tsmc_cl013g_rvt_ss_1p08v_125c.db"
+Loading db file '/home/IC/FINAL_PROJECT/synthesis/std_cells/scmetro_tsmc_cl013g_rvt_ss_1p08v_125c.db'
+1
+set_top system_TOP
+Setting top design to 'i:/WORK/system_TOP'
+Status:  Implementing inferred operators...
+
+************ Library Checking Summary ************
+Warning:  1 unlinked power cell(s) with unread pg pins.
+        Use 'report_libraries -defects all' for more details.
+**************************************************
+
+Top design successfully set to 'i:/WORK/system_TOP'
+Implementation design set to 'i:/WORK/system_TOP'
+1
+###################### Matching Compare points ####################
+match
+Reference design is 'r:/WORK/system_TOP'
+Implementation design is 'i:/WORK/system_TOP'
+Status:  Checking designs...
+    Warning: 0 (12) undriven nets found in reference (implementation) design; see formality.log for list (FM-399)
+Status:  Building verification models...
+Status:  Processing Guide Commands...
+
+***************************** Guidance Summary *****************************
+                                         Status
+Command                 Accepted   Rejected  Unsupported  Unprocessed  Total
+----------------------------------------------------------------------------
+environment         :          2          0          0          0          2
+instance_map        :         29          0          0          0         29
+mark                :         18          0          0          0         18
+multiplier          :          4          0          0          0          4
+replace             :          1          0          0          0          1
+transformation
+   map              :         28          0          0          0         28
+   share            :          2          0          0          0          2
+uniquify            :          3          3          0          0          6
+
+Note: If verification succeeds you can safely ignore unaccepted guidance commands.
+
+SVF files read:
+      /home/IC/FINAL_PROJECT/synthesis/syn/system_TOP.svf
+
+SVF files produced:
+  /home/IC/FINAL_PROJECT/synthesis/fm/formality_svf/
+    svf.txt
+****************************************************************************
+
+Status:  Matching...
+    
+*********************************** Matching Results ***********************************    
+ 413 Compare points matched by name    
+ 0 Compare points matched by signature analysis    
+ 0 Compare points matched by topology    
+ 4 Matched primary inputs, black-box outputs    
+ 0(0) Unmatched reference(implementation) compare points    
+ 0(0) Unmatched reference(implementation) primary inputs, black-box outputs    
+****************************************************************************************
+
+1
+######################### Run Verification ########################
+set successful [verify]
+Reference design is 'r:/WORK/system_TOP'
+Implementation design is 'i:/WORK/system_TOP'
+    
+*********************************** Matching Results ***********************************    
+ 413 Compare points matched by name    
+ 0 Compare points matched by signature analysis    
+ 0 Compare points matched by topology    
+ 4 Matched primary inputs, black-box outputs    
+ 0(0) Unmatched reference(implementation) compare points    
+ 0(0) Unmatched reference(implementation) primary inputs, black-box outputs    
+****************************************************************************************
+
+Status:  Verifying...
+
+***************************** Synopsys Auto Setup Summary ******************************
+
+!!! Synopsys Auto Setup Mode was enabled. !!!
+!!! Verification results are valid assuming the following setup constraints: !!!
+
+### RTL Interpretation Setup
+   set hdlin_ignore_parallel_case false
+   set hdlin_ignore_full_case false
+   set hdlin_error_on_mismatch_message false
+   set hdlin_ignore_embedded_configuration true
+
+### Undriven Signal Handling Setup
+   set verification_set_undriven_signals synthesis
+
+### Test Logic Setup
+   set verification_verify_directly_undriven_output false
+   For details see report_dont_verify_points and report_constants
+
+
+For further details on Synopsys Auto Setup Mode: Type man synopsys_auto_setup
+****************************************************************************************
+
+
+********************************* Verification Results *********************************
+Verification SUCCEEDED
+   ATTENTION: synopsys_auto_setup mode was enabled.
+              See Synopsys Auto Setup Summary for details.
+----------------------------------------------------------
+ Reference design: r:/WORK/system_TOP
+ Implementation design: i:/WORK/system_TOP
+ 413 Passing compare points
+----------------------------------------------------------------------------------------
+Matched Compare Points     BBPin    Loop   BBNet     Cut    Port     DFF     LAT   TOTAL
+----------------------------------------------------------------------------------------
+Passing (equivalent)           0       0       0       0       4     408       1     413
+Failing (not equivalent)       0       0       0       0       0       0       0       0
+Not Compared
+  Unread                       0       0       0       0       0       1       0       1
+****************************************************************************************
+1
+if {!$successful} {
+diagnose
+analyze_points -failing
+}
+########################### Reporting ############################# 
+report_passing_points > "passing_points.rpt"
+report_failing_points > "failing_points.rpt"
+report_aborted_points > "aborted_points.rpt"
+report_unverified_points > "unverified_points.rpt"
+fm_shell (verify)> 
